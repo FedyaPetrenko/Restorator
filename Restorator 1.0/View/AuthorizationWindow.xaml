@@ -1,0 +1,107 @@
+﻿<Window x:Class="Restorator_1._0.View.AuthorizationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Restorator 1.0 - Authotization" 
+        MaxHeight="250"
+        MaxWidth="320"
+        MinWidth="320"
+        MinHeight="250"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow"
+        ShowInTaskbar="True"
+        SizeToContent="WidthAndHeight" 
+        Topmost="True" 
+        Icon="/Restorator 1.0;component/Images/big_icon.png" Closed="Window_Closed"
+        >
+    
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label  Content="Authorization" 
+                Foreground="#FF212121" 
+                FontSize="30" 
+                FontFamily="Tw Cen MT Condensed Extra Bold" 
+                HorizontalAlignment="Center"
+                Grid.Row="0"
+                FontWeight="Bold"
+                Margin="0,0,0,10"
+                Width="auto"
+           />
+
+        <StackPanel Grid.Row="1" 
+                    Orientation="Horizontal"
+                    Width="auto"
+                    Height="auto"
+                    Margin="5,0,5,10"
+                    >
+
+            <Label  Content="Login:" 
+                    FontSize="21.333" 
+                    FontFamily="Yu Gothic UI Semibold" 
+                    HorizontalAlignment="Left"
+                    Margin="10,0,28,0"
+                    Style="{StaticResource LabelStyle}"
+            >
+            </Label>
+
+            <TextBox Width="170"
+                     Height="30"
+                     HorizontalAlignment="Right"
+                     Margin="15,0,10,0"
+                     FontSize="20"
+                     Text="{Binding Login}"/>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" 
+                    Orientation="Horizontal"
+                    Margin="5,0,5,0"
+                    >
+
+            <Label  Content="Password:" 
+                    FontSize="21.333" 
+                    FontFamily="Yu Gothic UI Semibold" 
+                    HorizontalAlignment="Left"
+                    Margin="10,0,5,0"
+                    Style="{StaticResource LabelStyle}"
+            />
+
+            <TextBox Width="170"
+                         Height="30"
+                         HorizontalAlignment="Right"
+                         FontSize="20"
+                     Text="{Binding Password}"/>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" 
+                    Orientation="Horizontal"
+                    Margin="5,0,5,0"
+                    >
+
+            <Button Content="Sign in" 
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Left"
+                    Margin="15,10,55,10"
+                    Padding="5"
+                    Command="{Binding SignInCommand}" Click="Button_Click" />
+
+            <Button  Content="Registration" 
+                    HorizontalAlignment="Right"
+                    Margin="30,10,15,10"
+                    Command="{Binding OpenRegistrationWindowCommand}" Click="Button_Click_1"
+                    />
+
+        </StackPanel>
+    </Grid>
+</Window>

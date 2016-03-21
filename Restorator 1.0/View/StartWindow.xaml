@@ -1,0 +1,129 @@
+<Window x:Class="Restorator_1._0.StartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+        Title="Restorator 1.0"
+        MaxHeight="510"
+        MinHeight="480"
+        MaxWidth="400"
+        MinWidth="400"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow"
+        ShowInTaskbar="True"
+        SizeToContent="WidthAndHeight"
+        Topmost="True"
+        FontWeight="Bold"
+        Icon="/Restorator 1.0;component/Images/big_icon.png" Loaded="Window_Loaded" Closed="Window_Closed">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+
+            <Label Content="Restorator 1.0"
+                   Foreground="#FF212121"
+                   FontSize="48"
+                   FontFamily="Vivaldi"
+                   HorizontalAlignment="Center" />
+        </StackPanel>
+
+        <Image Grid.Row="0" 
+               Source="../Images/information.png"
+               Width="25"
+               HorizontalAlignment="Right"
+               Margin="0,0,10,36"
+               RenderTransformOrigin="6.88,0.633" 
+               />
+
+        <Image Source="/Restorator 1.0;component/Images/restaurant.jpg"
+               Grid.Row="1"
+               Margin="0,10"
+               Width="400" />
+
+        <StackPanel Grid.Row="2"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Margin="0,0,0,10">
+
+            <Button x:Name="GoToMenu"
+                    Content="MENU"
+                    Margin="10,0,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    BorderThickness="3"
+                    BorderBrush="#FFD1C9C9"
+                    Width="auto"
+                    Height="50"
+                    Command="{Binding OpenMenuWindowCommand}" 
+                    Click="Button_Click_2" />
+
+            <Button x:Name="GoToAuthorization"
+                    Content="AUTHORIZATION"
+                    Margin="10,0,10,0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    BorderThickness="3"
+                    BorderBrush="#FFD1C9C9"
+                    Width="auto"
+                    Height="50"
+                    Command="{Binding OpenAuthorizationWindowCommand}"
+                    ToolTip="To register a new employee, open authorization!"
+                    Click="Button_Click_1" />
+
+            <Button x:Name="GoToStorageButton"
+                    Content="STORAGE"
+                    Margin="0,0,10,0"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    BorderThickness="3"
+                    BorderBrush="#FFD1C9C9"
+                    Width="auto"
+                    Height="50"
+                    Command="{Binding OpenDepotWindowCommand}"
+                    Click="GoToStorageButton_Click" />
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="3">
+
+            <Label Content="The program is protected by law of Ukraine and"
+                   Foreground="#FF212121"
+                   FontFamily="Times New Roman"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   BorderThickness="0"
+                   Margin="10,0,10,0" />
+
+            <Label Content="international copyright laws."
+                   Foreground="#FF212121"
+                   FontFamily="Times New Roman"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   BorderThickness="0"
+                   Margin="10,0,10,0" />
+
+            <Label Content="@ Copyright 2015"
+                   Foreground="#FF212121"
+                   FontFamily="Wide Latin"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   BorderThickness="0"
+                   Margin="10,0,10,0" />
+        </StackPanel>
+
+
+    </Grid>
+</Window>

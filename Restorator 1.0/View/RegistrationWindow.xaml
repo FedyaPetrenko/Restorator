@@ -1,0 +1,360 @@
+﻿<Window x:Class="Restorator_1._0.View.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Restorator 1.0 - Registration" 
+        MinHeight="440"
+        MinWidth="850"
+        MaxWidth="850"
+        MaxHeight="440"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow"
+        ShowInTaskbar="True"
+        SizeToContent="WidthAndHeight" 
+        Topmost="True" 
+        Icon="/Restorator 1.0;component/Images/big_icon.png" Closed="Window_Closed" 
+        >
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" MaxWidth="362"></ColumnDefinition>
+            <ColumnDefinition Width="auto" MaxWidth="504"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label  Grid.ColumnSpan="2"
+                Content="Registration" 
+                Foreground="#FF212121" 
+                FontSize="40" 
+                FontFamily="Tw Cen MT Condensed Extra Bold" 
+                HorizontalAlignment="Center"
+                FontWeight="Bold"
+                Width="194"
+                Margin="336,0,336,10"/>
+
+        <Grid Grid.Row="1"
+              Grid.Column="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <GroupBox Grid.Row="0" 
+                  Grid.Column="0"
+                  Margin="10,5,0,10" 
+                  BorderBrush="#FFFF9C00"
+                  Header="Main information" 
+                  FontSize="16"
+                  FontFamily="Comic Sans MS"
+                  HorizontalAlignment="Left"
+                  Height="auto"
+                  >
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel  Grid.Row="0"
+                    Orientation="Horizontal"
+                    Width="auto"
+                    Height="auto">
+
+                        <Label  Content="Name:" 
+        		    FontSize="20" 
+        		    HorizontalAlignment="Left"
+                    Margin="10,0,10,0"
+                    Style="{StaticResource LabelStyle}"/>
+
+                        <TextBox Width="200"
+        		    Height="28"
+        		    HorizontalAlignment="Right"
+        		    FontSize="20"
+                    Margin="40,0,10,0"
+                    Text="{Binding FirstName}"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="1"
+                    Orientation="Horizontal"
+                    Width="auto"
+                    Height="auto">
+                        <Label  Content="Surname:" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="10,0,10,0"
+                    Style="{StaticResource LabelStyle}"/>
+
+                        <TextBox Width="200"
+            	Height="28"
+            	HorizontalAlignment="Right"
+            	FontSize="20" 
+                Margin="12,0,0,0"
+                Text="{Binding SecondName}"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="2" 
+                    Orientation="Horizontal"
+                    Width="auto"
+                    Height="auto">
+
+                        <Label  Content="Last name:" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="10,0,10,0"
+                    Style="{StaticResource LabelStyle}"/>
+
+                        <TextBox Width="200"
+            	    Height="28"
+            	    HorizontalAlignment="Right"
+            	    FontSize="20" 
+                    Margin="0,0,10,0"
+                    Text="{Binding ThirdName}"/>
+                    </StackPanel>
+                </Grid>
+            </GroupBox>
+
+            <GroupBox Grid.Row="1" 
+                  Grid.Column="0"
+                  Margin="10,5,0,10" 
+                  BorderBrush="#FFFF9C00"
+                  Header="To enter in system" 
+                  FontSize="16"
+                  FontFamily="Comic Sans MS"
+                  HorizontalAlignment="Left" Width="344"
+                  >
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Row="0" 
+                    Orientation="Horizontal"
+                    Width="auto"
+                    Height="auto">
+
+                        <Label  Content="Login:" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="10,0,10,0"
+                    Style="{StaticResource LabelStyle}"/>
+
+                        <TextBox Width="200"
+            	    Height="28"
+            	    HorizontalAlignment="Right"
+            	    FontSize="20" 
+                    Margin="38,0,10,0"
+                    Text="{Binding Login}"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="1" 
+                    Orientation="Horizontal"
+                    Width="auto"
+                    Height="auto">
+
+                        <Label  Content="Password:" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="10,0,10,0"
+                    Style="{StaticResource LabelStyle}"/>
+
+                        <TextBox Width="200"
+            	    Height="28"
+            	    HorizontalAlignment="Right"
+            	    FontSize="20" 
+                    Margin="0,0,10,0"
+                    Text="{Binding Password}"/>
+                    </StackPanel>
+
+
+                </Grid>
+            </GroupBox>
+
+        </Grid>
+
+
+        <GroupBox Grid.Row="1" 
+                  Grid.Column="1"
+                  Margin="10,5,0,10" 
+                  BorderBrush="#FFFF9C00"
+                  Header="Communication and the salary" 
+                  FontSize="16"
+                  FontFamily="Comic Sans MS"
+                  HorizontalAlignment="Left" Width="448"
+                  >
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Row="0"
+                    Orientation="Horizontal"
+                    Width="auto"
+                    Height="auto">
+
+                    <Label  Content="Phone number:" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Style="{StaticResource LabelStyle}"
+                    Margin="10,0,0,0"/>
+
+                    <TextBox Width="200"
+            	    Height="28"
+            	    HorizontalAlignment="Right"
+            	    FontSize="20" 
+                    Margin="60,0,10,0"
+                    Text="{Binding PhoneNumber}"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1"
+                    Orientation="Horizontal"
+                    Width="auto"
+                    Height="auto">
+
+                    <Label  Content="Email:"
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="10,0,19,0"
+                    Style="{StaticResource LabelStyle}"/>
+
+                    <TextBox Width="200"
+            	    Height="28"
+            	    HorizontalAlignment="Right"
+            	    FontSize="20" 
+                    Margin="120,0,10,0"
+                    Text="{Binding Email}"/>
+                </StackPanel>
+
+
+                <StackPanel Grid.Row="2" 
+                    Orientation="Horizontal"
+                    Width="auto"
+                    Height="auto">
+
+                    <Label  Content="Identification code:" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="10,0,8,0"
+                    Style="{StaticResource LabelStyle}"/>
+
+                    <TextBox Width="200"
+            	    Height="28"
+            	    HorizontalAlignment="Right"
+            	    FontSize="20" 
+                    Margin="0,0,10,0"
+                    Text="{Binding IdentificationCode}"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="3" 
+                    Orientation="Horizontal"
+                    Width="auto"
+                    Height="auto">
+
+                    <Label  Content="Bank card:" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="10,0,14,0"
+                    Style="{StaticResource LabelStyle}"/>
+
+                    <TextBox Width="200"
+            	    Height="28"
+            	    HorizontalAlignment="Right"
+            	    FontSize="20" 
+                    Margin="83,0,10,0"
+                    Text="{Binding CardNumber}"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="4" 
+                    Orientation="Horizontal"
+                    Width="auto"
+                    Height="auto">
+
+                    <Label  Content="Address" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="10,0,10,0"
+                    Style="{StaticResource LabelStyle}"/>
+
+                    <TextBox Width="200"
+            	    Height="28"
+            	    HorizontalAlignment="Right"
+            	    FontSize="20" 
+                    Margin="106,0,10,0"
+                    Text="{Binding HomeAddress}"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="5" 
+                    Orientation="Horizontal"
+                    Width="auto"
+                    Height="auto">
+
+                <Label  Content="Salary" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="10,0,28,0"
+                    Style="{StaticResource LabelStyle}"/>
+
+                <TextBox Width="200"
+            	    Height="28"
+            	    HorizontalAlignment="Right"
+            	    FontSize="20" 
+                    Margin="106,0,10,0"
+                    Text="{Binding Salary}"/>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+
+        <Button Grid.Row="2"
+                Grid.Column="1"
+                Content="Clear information" 
+        		FontSize="24" 
+        		VerticalAlignment="Center"
+        		HorizontalAlignment="Right"
+        		Margin="0,12,266,10"
+        		Padding="5"
+                Command="{Binding ClearTextCommand}"/>
+        
+        <Button Grid.Row="2"
+                Grid.Column="1"
+                Content="Save employee" 
+        		FontSize="24" 
+        		VerticalAlignment="Center"
+        		HorizontalAlignment="Right"
+        		Margin="0,12,46,10"
+        		Padding="5"
+                Command="{Binding SaveEmployeeCommand}" Click="Button_Click"/>
+
+
+
+    </Grid>
+</Window>

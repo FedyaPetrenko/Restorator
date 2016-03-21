@@ -1,0 +1,126 @@
+G:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\bin\Debug\Restorator 1.0.exe.config
+G:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\bin\Debug\Restorator 1.0.exe
+G:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\bin\Debug\Restorator 1.0.pdb
+G:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\Restorator 1.0.csprojResolveAssemblyReference.cache
+G:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\AuthorizationWindow.baml
+G:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\MenuWindow.baml
+G:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\StartWindow.baml
+G:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\AuthorizationWindow.g.cs
+G:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\MenuWindow.g.cs
+G:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\StartWindow.g.cs
+G:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\App.g.cs
+G:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\Restorator 1.0_MarkupCompile.cache
+G:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\Restorator 1.0.g.resources
+G:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\Restorator_1._0.Properties.Resources.resources
+G:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\Restorator 1.0.csproj.GenerateResource.Cache
+G:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\Restorator 1.0.exe
+G:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\Restorator 1.0.pdb
+G:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\App.baml
+G:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\DepotWindow.baml
+G:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\DepotWindow.g.cs
+G:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\RegistrationWindow.baml
+G:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\RegistrationWindow.g.cs
+E:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\bin\Debug\Restorator 1.0.exe.config
+E:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\Restorator 1.0.exe
+E:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\Restorator 1.0.pdb
+E:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\bin\Debug\Restorator 1.0.exe
+E:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\bin\Debug\Restorator 1.0.pdb
+E:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\Restorator 1.0.csprojResolveAssemblyReference.cache
+E:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\AuthorizationWindow.baml
+E:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\DepotWindow.baml
+E:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\RegistrationWindow.baml
+E:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\StartWindow.baml
+E:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\MenuWindow.baml
+E:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\App.baml
+E:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\AuthorizationWindow.g.cs
+E:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\DepotWindow.g.cs
+E:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\RegistrationWindow.g.cs
+E:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\StartWindow.g.cs
+E:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\MenuWindow.g.cs
+E:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\App.g.cs
+E:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\Restorator 1.0_MarkupCompile.cache
+E:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\Restorator 1.0.g.resources
+E:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\Restorator_1._0.Properties.Resources.resources
+E:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\Restorator 1.0.csproj.GenerateResource.Cache
+E:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\Restorator 1.0_MarkupCompile.lref
+E:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\AddProductWindow.g.cs
+E:\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\AddProductWindow.baml
+D:\Новая папка (2)\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\bin\Debug\Restorator 1.0.exe.config
+D:\Новая папка (2)\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\Restorator 1.0.exe
+D:\Новая папка (2)\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\Restorator 1.0.pdb
+D:\Новая папка (2)\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\bin\Debug\Restorator 1.0.exe
+D:\Новая папка (2)\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\bin\Debug\Restorator 1.0.pdb
+D:\Новая папка (2)\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\Restorator 1.0.csprojResolveAssemblyReference.cache
+D:\Новая папка (2)\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\App.baml
+D:\Новая папка (2)\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\AddProductWindow.g.cs
+D:\Новая папка (2)\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\AuthorizationWindow.g.cs
+D:\Новая папка (2)\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\DepotWindow.g.cs
+D:\Новая папка (2)\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\RegistrationWindow.g.cs
+D:\Новая папка (2)\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\StartWindow.g.cs
+D:\Новая папка (2)\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\MenuWindow.g.cs
+D:\Новая папка (2)\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\App.g.cs
+D:\Новая папка (2)\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Новая папка (2)\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\Restorator 1.0_MarkupCompile.cache
+D:\Новая папка (2)\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\Restorator 1.0_MarkupCompile.lref
+D:\Новая папка (2)\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\AddProductWindow.baml
+D:\Новая папка (2)\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\AuthorizationWindow.baml
+D:\Новая папка (2)\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\DepotWindow.baml
+D:\Новая папка (2)\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\RegistrationWindow.baml
+D:\Новая папка (2)\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\StartWindow.baml
+D:\Новая папка (2)\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\View\MenuWindow.baml
+D:\Новая папка (2)\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\Restorator 1.0.g.resources
+D:\Новая папка (2)\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\Restorator_1._0.Properties.Resources.resources
+D:\Новая папка (2)\Labs\3 semester\OOP\Restorator 1.0\Restorator 1.0\obj\Debug\Restorator 1.0.csproj.GenerateResource.Cache
+C:\Users\Федя Петренко\Downloads\Fedya_Petrenko-restorator-c7423286ae4b\Restorator 1.0\bin\Debug\Restorator 1.0.exe.config
+C:\Users\Федя Петренко\Downloads\Fedya_Petrenko-restorator-c7423286ae4b\Restorator 1.0\obj\Debug\Restorator 1.0.exe
+C:\Users\Федя Петренко\Downloads\Fedya_Petrenko-restorator-c7423286ae4b\Restorator 1.0\obj\Debug\Restorator 1.0.pdb
+C:\Users\Федя Петренко\Downloads\Fedya_Petrenko-restorator-c7423286ae4b\Restorator 1.0\bin\Debug\Restorator 1.0.exe
+C:\Users\Федя Петренко\Downloads\Fedya_Petrenko-restorator-c7423286ae4b\Restorator 1.0\bin\Debug\Restorator 1.0.pdb
+C:\Users\Федя Петренко\Downloads\Fedya_Petrenko-restorator-c7423286ae4b\Restorator 1.0\obj\Debug\Restorator 1.0.csprojResolveAssemblyReference.cache
+C:\Users\Федя Петренко\Downloads\Fedya_Petrenko-restorator-c7423286ae4b\Restorator 1.0\obj\Debug\App.baml
+C:\Users\Федя Петренко\Downloads\Fedya_Petrenko-restorator-c7423286ae4b\Restorator 1.0\obj\Debug\View\AddProductWindow.g.cs
+C:\Users\Федя Петренко\Downloads\Fedya_Petrenko-restorator-c7423286ae4b\Restorator 1.0\obj\Debug\View\AuthorizationWindow.g.cs
+C:\Users\Федя Петренко\Downloads\Fedya_Petrenko-restorator-c7423286ae4b\Restorator 1.0\obj\Debug\View\DepotWindow.g.cs
+C:\Users\Федя Петренко\Downloads\Fedya_Petrenko-restorator-c7423286ae4b\Restorator 1.0\obj\Debug\View\RegistrationWindow.g.cs
+C:\Users\Федя Петренко\Downloads\Fedya_Petrenko-restorator-c7423286ae4b\Restorator 1.0\obj\Debug\View\StartWindow.g.cs
+C:\Users\Федя Петренко\Downloads\Fedya_Petrenko-restorator-c7423286ae4b\Restorator 1.0\obj\Debug\View\MenuWindow.g.cs
+C:\Users\Федя Петренко\Downloads\Fedya_Petrenko-restorator-c7423286ae4b\Restorator 1.0\obj\Debug\App.g.cs
+C:\Users\Федя Петренко\Downloads\Fedya_Petrenko-restorator-c7423286ae4b\Restorator 1.0\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Федя Петренко\Downloads\Fedya_Petrenko-restorator-c7423286ae4b\Restorator 1.0\obj\Debug\Restorator 1.0_MarkupCompile.cache
+C:\Users\Федя Петренко\Downloads\Fedya_Petrenko-restorator-c7423286ae4b\Restorator 1.0\obj\Debug\View\AddProductWindow.baml
+C:\Users\Федя Петренко\Downloads\Fedya_Petrenko-restorator-c7423286ae4b\Restorator 1.0\obj\Debug\View\AuthorizationWindow.baml
+C:\Users\Федя Петренко\Downloads\Fedya_Petrenko-restorator-c7423286ae4b\Restorator 1.0\obj\Debug\View\DepotWindow.baml
+C:\Users\Федя Петренко\Downloads\Fedya_Petrenko-restorator-c7423286ae4b\Restorator 1.0\obj\Debug\View\RegistrationWindow.baml
+C:\Users\Федя Петренко\Downloads\Fedya_Petrenko-restorator-c7423286ae4b\Restorator 1.0\obj\Debug\View\StartWindow.baml
+C:\Users\Федя Петренко\Downloads\Fedya_Petrenko-restorator-c7423286ae4b\Restorator 1.0\obj\Debug\View\MenuWindow.baml
+C:\Users\Федя Петренко\Downloads\Fedya_Petrenko-restorator-c7423286ae4b\Restorator 1.0\obj\Debug\Restorator 1.0.g.resources
+C:\Users\Федя Петренко\Downloads\Fedya_Petrenko-restorator-c7423286ae4b\Restorator 1.0\obj\Debug\Restorator_1._0.Properties.Resources.resources
+C:\Users\Федя Петренко\Downloads\Fedya_Petrenko-restorator-c7423286ae4b\Restorator 1.0\obj\Debug\Restorator 1.0.csproj.GenerateResource.Cache
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\bin\Debug\Restorator 1.0.exe.config
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\Restorator 1.0.exe
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\Restorator 1.0.pdb
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\bin\Debug\Restorator 1.0.exe
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\bin\Debug\Restorator 1.0.pdb
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\Restorator 1.0.csprojResolveAssemblyReference.cache
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\View\AddProductWindow.baml
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\View\AuthorizationWindow.baml
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\View\DepotWindow.baml
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\View\RegistrationWindow.baml
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\View\StartWindow.baml
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\View\MenuWindow.baml
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\App.baml
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\View\AboutWindow.g.cs
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\View\AddProductWindow.g.cs
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\View\AuthorizationWindow.g.cs
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\View\DepotWindow.g.cs
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\View\RegistrationWindow.g.cs
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\View\StartWindow.g.cs
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\View\MenuWindow.g.cs
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\App.g.cs
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\Restorator 1.0_MarkupCompile.cache
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\Restorator 1.0_MarkupCompile.lref
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\View\AboutWindow.baml
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\Restorator 1.0.g.resources
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\Restorator_1._0.Properties.Resources.resources
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\Restorator 1.0.csproj.GenerateResource.Cache
