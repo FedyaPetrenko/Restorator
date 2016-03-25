@@ -44,5 +44,12 @@ namespace Restorator_1._0
             Application app = Application.Current;
             app.Shutdown();
         }
+
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            Visibility = Visibility.Hidden;
+            AboutWindow aboutWindow = new AboutWindow();
+            aboutWindow.Show();
+        }
     }
 }

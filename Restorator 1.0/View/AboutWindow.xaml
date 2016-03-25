@@ -5,9 +5,52 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Restorator_1._0.View"
         mc:Ignorable="d"
-        Title="AboutWindow" Height="300" Width="300">
+        Title="About"
+        MaxHeight="300"
+        MinHeight="300"
+        MaxWidth="400"
+        MinWidth="400"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow"
+        ShowInTaskbar="True"
+        SizeToContent="WidthAndHeight"
+        Topmost="True"
+        FontWeight="Bold"
+        Icon="/Restorator 1.0;component/Images/big_icon.png" 
+        Closed="AboutWindow_OnClosed">
+
     <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MinHeight="176" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" MinWidth="208" />
+        </Grid.ColumnDefinitions>
         
-        
+        <Image HorizontalAlignment="Left" 
+               Height="166" 
+               Margin="10,10,0,0" 
+               VerticalAlignment="Top" 
+               Width="164"
+               Source="../Images/big_icon.png"/>
+
+        <StackPanel Grid.Row="0" Grid.Column="1"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+
+            <Label Content="Restorator 1.0"
+                   Foreground="#FF212121"
+                   FontSize="30"
+                   FontFamily="Vivaldi"
+                   HorizontalAlignment="Center" Width="193" />
+            
+            <TextBox>
+</TextBox>
+        </StackPanel>
+
     </Grid>
 </Window>

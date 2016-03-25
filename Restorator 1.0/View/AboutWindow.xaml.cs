@@ -23,5 +23,12 @@ namespace Restorator_1._0.View
         {
             InitializeComponent();
         }
+
+        private void AboutWindow_OnClosed(object sender, EventArgs e)
+        {
+            Visibility = Visibility.Hidden;
+            StartWindow startWindow = new StartWindow();
+            startWindow.Show();
+        }
     }
 }

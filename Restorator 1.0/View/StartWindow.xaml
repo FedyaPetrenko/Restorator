@@ -14,7 +14,8 @@
         SizeToContent="WidthAndHeight"
         Topmost="True"
         FontWeight="Bold"
-        Icon="/Restorator 1.0;component/Images/big_icon.png" Loaded="Window_Loaded" Closed="Window_Closed">
+        Icon="/Restorator;component/Images/big_icon.png" 
+        Loaded="Window_Loaded" Closed="Window_Closed">
 
     <Grid>
 
@@ -33,22 +34,26 @@
                     Orientation="Horizontal"
                     HorizontalAlignment="Center">
 
-            <Label Content="Restorator 1.0"
+            <Label Content="Restorator"
                    Foreground="#FF212121"
                    FontSize="48"
                    FontFamily="Vivaldi"
                    HorizontalAlignment="Center" />
         </StackPanel>
 
-        <Image Grid.Row="0" 
-               Source="../Images/information.png"
-               Width="25"
-               HorizontalAlignment="Right"
-               Margin="0,0,10,36"
-               RenderTransformOrigin="6.88,0.633" 
-               />
+        <Button Grid.Row="0"
+                Width="25"
+                HorizontalAlignment="Right"
+                Margin="5,5,10,40"
+                RenderTransformOrigin="6.88,0.633" 
+                Click="ButtonBase_OnClick" BorderThickness="0"
+               >
+            <Button.Background>
+                <ImageBrush ImageSource="/Restorator;component/Images/information.png"/>
+            </Button.Background>
+        </Button>
 
-        <Image Source="/Restorator 1.0;component/Images/restaurant.jpg"
+        <Image Source="/Restorator;component/Images/restaurant.jpg"
                Grid.Row="1"
                Margin="0,10"
                Width="400" />
@@ -58,8 +63,7 @@
                     HorizontalAlignment="Center"
                     Margin="0,0,0,10">
 
-            <Button x:Name="GoToMenu"
-                    Content="MENU"
+            <Button Content="MENU"
                     Margin="10,0,0,0"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Top"
@@ -123,7 +127,6 @@
                    BorderThickness="0"
                    Margin="10,0,10,0" />
         </StackPanel>
-
 
     </Grid>
 </Window>

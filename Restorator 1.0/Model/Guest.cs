@@ -1,63 +1,36 @@
-﻿namespace Restorator_1._0.Model
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Restorator_1._0.Model
 {
-    internal class Guest
+    public class Guest
     {
-        private long _cardNumber;
-        private string _password;
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid GuestId { get; set; }
 
-        private string _firstName;
-        private string _secondName;
-        private string _thirdName;
+        [Required][MaxLength(30)]
+        public string FirstName { get; set; }
 
-        private string _phoneNumber;
-        private string _email;
+        [Required][MaxLength(30)]
+        public string SecondName { get; set; }
 
+        [MaxLength(30)]
+        public string ThirdName { get; set; }
 
-        public long CardNumber
-        {
-            get { return _cardNumber; }
-            set { _cardNumber = value; }
-        }
+        [Required][MaxLength(10)]
+        public long CardNumber { get; set; }
 
-        public string Password
-        {
-            get { return _password; }
-            set { _password = value; }
-        }
+         [Required][MaxLength(20)]
+        public string Password { get; set; }
 
-        public string FirstName
-        {
-            get { return _firstName; }
-            set { _firstName = value; }
-        }
+        [Required]
+        [RegularExpression("([0-9][0-9][0-9])-[0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]")]
+        public string PhoneNumber { get; set; }
 
-        public string SecondName
-        {
-            get { return _secondName; }
-            set { _secondName = value; }
-        }
+        [RegularExpression(@"^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$")]
+        public string Email { get; set; }
 
-        public string ThirdName
-        {
-            get { return _thirdName; }
-            set { _thirdName = value; }
-        }
-
-        public string PhoneNumber
-        {
-            get {return _phoneNumber; }
-            set { _phoneNumber = value; }
-        }
-
-        public string Email
-        {
-            get { return _email; }
-            set { _email = value; }
-        }
-
-        public Guest()
-        {
-        }
 
         public Guest(long cardNumber, string password)
         {

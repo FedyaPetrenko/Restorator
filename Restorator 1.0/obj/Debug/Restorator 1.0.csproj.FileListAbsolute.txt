@@ -124,3 +124,4 @@ E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\View\AboutWi
 E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\Restorator 1.0.g.resources
 E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\Restorator_1._0.Properties.Resources.resources
 E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\Restorator 1.0.csproj.GenerateResource.Cache
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\bin\Debug\Restorator.exe.config

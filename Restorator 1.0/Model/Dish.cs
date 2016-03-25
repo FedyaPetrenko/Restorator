@@ -1,6 +1,6 @@
 ﻿namespace Restorator_1._0.Model
 {
-    internal class Dish
+    public class Dish
     {
         private string _typeOfMeals;
         private string _name;
