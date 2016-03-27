@@ -1,54 +1,52 @@
-﻿namespace Restorator_1._0.Model
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Restorator.Model;
+
+namespace Restorator_1._0.Model
 {
     public class Dish
     {
-        private string _typeOfMeals;
-        private string _name;
-        private int _weight;
-        private string _composition;
-        private int _price;
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid DishId { get; set; }
 
-        public string TypeOfMeals
-        {
-            get { return _typeOfMeals; }
-            set { _typeOfMeals = value; }
-        }
+        [Required]
+        [MaxLength(30)]
+        public string Name { get; set; }
 
-        public string Name
-        {
-            get { return _name; }
-            set { _name = value; }
-        }
+        [Required]
+        [MaxLength(30)]
+        public string TypeOfMeals { get; set; }
 
-        public int Weight
-        {
-            get { return _weight; }
-            set { _weight = value; }
-        }
+        [Required]
+        public int? Weight { get; set; }
 
-        public string Composition
-        {
-            get { return _composition; }
-            set { _composition = value; }
-        }
+        [Required]
+        [MaxLength(100)]
+        public string Composition { get; set; }
 
-        public int Price
-        {
-            get { return _price; }
-            set { _price = value; }
-        }
+        public int Price { get; set; }
+
+        private ICollection<Order> Orders { get; set; }
+
+        private ICollection<Product> Products { get; set; }
 
         public Dish()
         {
+            Orders = new List<Order>();
+            Products = new List<Product>();
         }
 
-        public Dish(string typeOfMeals, string name, int weight, string composition, int price)
+        public Dish(string name, string typeOfMeals, int weight, string composition, int price)
         {
-            TypeOfMeals = typeOfMeals;
             Name = name;
+            TypeOfMeals = typeOfMeals;
             Weight = weight;
             Composition = composition;
             Price = price;
+            Orders = new List<Order>();
+            Products = new List<Product>();
         }
     }
 }

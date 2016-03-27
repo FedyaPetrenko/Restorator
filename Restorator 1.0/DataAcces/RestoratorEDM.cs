@@ -1,5 +1,6 @@
-﻿using Restorator_1._0.Model;
-using System.Data.Entity;
+﻿using System.Data.Entity;
+using Restorator.Model;
+using Restorator_1._0.Model;
 
 namespace Restorator_1._0.DataAcces
 {

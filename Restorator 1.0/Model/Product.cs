@@ -1,62 +1,42 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Restorator_1._0.Model;
 
-namespace Restorator_1._0.Model
+namespace Restorator.Model
 {
     public class Product
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid ProductId { get; set; }
 
+        [Required]
+        [MaxLength(30)]
         public string Name { get; set; }
-        public string BarCode { get; set; }
 
+        [MaxLength(50)]
         public string Description { get; set; }
 
+        [Required]
         public int? Price { get; set; }
+
+        [Required]
+        public int? Count { get; set; }
+
+        public ICollection<Dish> Dishes { get; set; }
 
         public Product()
         {
+            Dishes = new List<Dish>();
         }
 
-        //public Product(int idDish, string barcode, string name, string description, int price)
-        //{
-        //    Id_Dish = idDish;
-        //    BarCode = barcode;
-        //    Name = name;
-        //    Description = description;
-        //    Price = price;
-        //}
-
-        //    public Product(int? idProduct, int? idDish, string barcode, string name, string description, int? price)
-        //    {
-        //        IdProduct = idProduct;
-        //        Id_Dish = idDish;
-        //        BarCode = barcode;
-        //        Name = name;
-        //        Description = description;
-        //        Price = price;
-        //    }
-
-        //    public Product(int idProduct, string barcode, string name, string description, int price)
-        //    {
-        //        IdProduct = idProduct;
-        //        Id_Dish = Id_Dish;
-        //        BarCode = barcode;
-        //        Name = name;
-        //        Description = description;
-        //        Price = price;
-        //    }
-
-        //    public Product(int? idDish, string barCode, string name, string description, int? price)
-        //    {
-        //        this.IdDish = idDish;
-        //        BarCode = barCode;
-        //        Name = name;
-        //        Description = description;
-        //        Price = price;
-        //    }
-        //}
+        public Product(string name, string description, int? price, int? count)
+        {
+            Name = name;
+            Description = description;
+            Price = price;
+            Count = count;
+        }
     }
 }
