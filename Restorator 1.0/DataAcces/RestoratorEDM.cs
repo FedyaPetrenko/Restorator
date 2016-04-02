@@ -1,5 +1,4 @@
 ﻿using System.Data.Entity;
-using Restorator.Model;
 using Restorator_1._0.Model;
 
 namespace Restorator_1._0.DataAcces
@@ -9,14 +8,15 @@ namespace Restorator_1._0.DataAcces
         public RestoratorEdm()
             : base("name=RestoratorEdm")
         {
+            Database.SetInitializer(new CreateDatabaseIfNotExists<RestoratorEdm>());
         }
 
-        public virtual DbSet<Employee> Employees { get; set; }
-        public virtual DbSet<Guest> Guests { get; set; } 
-        public virtual DbSet<Order> Orders { get; set; }
-        public virtual DbSet<Dish> Dishes { get; set; }
-        public virtual DbSet<Product> Products { get; set; }  
-        public virtual DbSet<Hall> Halls { get; set; }
-        public virtual DbSet<Table> Tables { get; set; }  
+        public  DbSet<Employee> Employees { get; set; }
+        public  DbSet<Guest> Guests { get; set; } 
+        public  DbSet<Order> Orders { get; set; }
+        public  DbSet<Dish> Dishes { get; set; }
+        public  DbSet<Product> Products { get; set; }  
+        public  DbSet<Hall> Halls { get; set; }
+        public  DbSet<Table> Tables { get; set; }  
     }
 }

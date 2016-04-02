@@ -7,9 +7,6 @@
         <Style TargetType="Grid">
             <Setter Property="Background" Value="#FFFBC02D"/>
         </Style>
-
-       
-        
         <Style x:Key="LabelStyle">
             <Setter Property="Label.Foreground">
                 <Setter.Value>

@@ -122,6 +122,9 @@ E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\Restorator 1
 E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\Restorator 1.0_MarkupCompile.lref
 E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\View\AboutWindow.baml
 E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\Restorator 1.0.g.resources
-E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\Restorator_1._0.Properties.Resources.resources
 E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\Restorator 1.0.csproj.GenerateResource.Cache
-E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\bin\Debug\Restorator.exe.config
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\bin\Debug\EntityFramework.dll
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\bin\Debug\EntityFramework.SqlServer.dll
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\bin\Debug\EntityFramework.xml
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\bin\Debug\EntityFramework.SqlServer.xml
+E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\Restorator.Properties.Resources.resources

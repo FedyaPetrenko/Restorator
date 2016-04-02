@@ -1,4 +1,4 @@
-<Window x:Class="Restorator_1._0.StartWindow"
+<Window x:Class="Restorator_1._0.View.StartWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -14,7 +14,7 @@
         SizeToContent="WidthAndHeight"
         Topmost="True"
         FontWeight="Bold"
-        Icon="/Restorator;component/Images/big_icon.png" 
+        Icon="../Images/big_icon.png" 
         Loaded="Window_Loaded" Closed="Window_Closed">
 
     <Grid>
@@ -41,21 +41,23 @@
                    HorizontalAlignment="Center" />
         </StackPanel>
 
-        <Button Grid.Row="0"
-                Width="25"
-                HorizontalAlignment="Right"
-                Margin="5,5,10,40"
-                RenderTransformOrigin="6.88,0.633" 
-                Click="ButtonBase_OnClick" BorderThickness="0"
-               >
-            <Button.Background>
-                <ImageBrush ImageSource="/Restorator;component/Images/information.png"/>
-            </Button.Background>
-        </Button>
+        <Label Grid.Row="0"
+               Width="57"
+               Content="About"
+               HorizontalAlignment="Right"
+               Margin="0,10,10,35"
+               ToolTip="About program"
+               FontWeight="Normal" 
+               FontStyle="Italic" 
+               FontFamily="Tempus Sans ITC" 
+               MouseDown="Label_MouseDown" 
+               FontSize="16" 
+               BorderBrush="#FF090909" 
+               Background="#FFFF9000"/>
 
-        <Image Source="/Restorator;component/Images/restaurant.jpg"
+        <Image Source="../Images/restaurant.jpg"
                Grid.Row="1"
-               Margin="0,10"
+               Margin="5,0,5,5"
                Width="400" />
 
         <StackPanel Grid.Row="2"
@@ -98,11 +100,9 @@
                     Height="50"
                     Command="{Binding OpenDepotWindowCommand}"
                     Click="GoToStorageButton_Click" />
-
         </StackPanel>
 
         <StackPanel Grid.Row="3">
-
             <Label Content="The program is protected by law of Ukraine and"
                    Foreground="#FF212121"
                    FontFamily="Times New Roman"
@@ -127,6 +127,5 @@
                    BorderThickness="0"
                    Margin="10,0,10,0" />
         </StackPanel>
-
     </Grid>
 </Window>

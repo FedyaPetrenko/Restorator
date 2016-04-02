@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Restorator_1._0.Model;
 
-namespace Restorator.Model
+namespace Restorator_1._0.Model
 {
     public class Product
     {

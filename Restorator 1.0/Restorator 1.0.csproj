@@ -79,6 +79,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\DelegateCommand.cs" />
     <Compile Include="DataAcces\RestoratorEDM.cs" />
     <Compile Include="Model\Dish.cs" />
     <Compile Include="Model\Employee.cs" />
@@ -87,8 +88,14 @@
     <Compile Include="Model\Order.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\Table.cs" />
-    <Compile Include="Model\Visiting.cs" />
     <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="ViewModel\AddProductWindowViewModel.cs" />
+    <Compile Include="ViewModel\AuthorizationWindowViewModel.cs" />
+    <Compile Include="ViewModel\DepotWindowViewModel.cs" />
+    <Compile Include="ViewModel\MenuWindowViewModel.cs" />
+    <Compile Include="ViewModel\RegistrationWindowViewModel.cs" />
+    <Compile Include="ViewModel\StartWindowViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="View\AboutWindow.xaml.cs">
       <DependentUpon>AboutWindow.xaml</DependentUpon>
     </Compile>
@@ -185,9 +192,7 @@
     <Resource Include="Images\BigPlus.jpg" />
     <Resource Include="Images\plus.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModel\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Images\information.png" />
   </ItemGroup>
