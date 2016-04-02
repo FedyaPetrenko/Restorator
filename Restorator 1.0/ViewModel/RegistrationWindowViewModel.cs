@@ -2,8 +2,8 @@
 using System.Windows;
 using System.Windows.Input;
 using Restorator.Commands;
-using Restorator_1._0.DataAcces;
-using Restorator_1._0.Model;
+using Restorator.DataAcces;
+using Restorator.Model;
 
 namespace Restorator.ViewModel
 {

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\obj\Debug\
+E:\Labs\4 semester\ООП 2\Restorator\Restorator 1.0\obj\Debug\
 Restorator
 none
 false
 DEBUG;TRACE
-E:\Labs\4 semester\ООП 2\Restorator 2.1\Restorator 1.0\App.xaml
+E:\Labs\4 semester\ООП 2\Restorator\Restorator 1.0\App.xaml
 71512962445
 
-25-1220064830
-178591003
+25-579023310
+18-1100383268
 View\AboutWindow.xaml;View\AddProductWindow.xaml;View\AuthorizationWindow.xaml;View\DepotWindow.xaml;View\RegistrationWindow.xaml;View\StartWindow.xaml;View\MenuWindow.xaml;
 
-True
+False
 

@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace Restorator_1._0.View
+namespace Restorator.View
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
@@ -44,7 +44,7 @@ namespace Restorator_1._0.View
             app.Shutdown();
         }
 
-        private void Label_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void ButtonAbout_Click(object sender, RoutedEventArgs e)
         {
             Visibility = Visibility.Hidden;
             AboutWindow aboutWindow = new AboutWindow();

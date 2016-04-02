@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Restorator_1._0.Model
+namespace Restorator.Model
 {
     public class Dish
     {

@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace Restorator_1._0.View
+namespace Restorator.View
 {
     /// <summary>
     /// Логика взаимодействия для WelcomeWindow.xaml

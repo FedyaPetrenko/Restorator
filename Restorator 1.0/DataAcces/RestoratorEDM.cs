@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
-using Restorator_1._0.Model;
+using Restorator.Model;
 
-namespace Restorator_1._0.DataAcces
+namespace Restorator.DataAcces
 {
     public class RestoratorEdm : DbContext
     {

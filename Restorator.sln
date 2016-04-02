@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restorator 1.0", "Restorator 1.0\Restorator 1.0.csproj", "{DD8981BF-4787-4346-B381-4759BFFDEF3B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restorator", "Restorator 1.0\Restorator.csproj", "{DD8981BF-4787-4346-B381-4759BFFDEF3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restorator.Model", "Restorator.Model\Restorator.Model.csproj", "{F5F25804-576B-492B-9361-247E8AE12875}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{DD8981BF-4787-4346-B381-4759BFFDEF3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD8981BF-4787-4346-B381-4759BFFDEF3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD8981BF-4787-4346-B381-4759BFFDEF3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5F25804-576B-492B-9361-247E8AE12875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5F25804-576B-492B-9361-247E8AE12875}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5F25804-576B-492B-9361-247E8AE12875}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5F25804-576B-492B-9361-247E8AE12875}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

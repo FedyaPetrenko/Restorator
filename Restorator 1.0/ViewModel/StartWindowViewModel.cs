@@ -1,6 +1,6 @@
 ﻿using System.Windows.Input;
 using Restorator.Commands;
-using Restorator_1._0.View;
+using Restorator.View;
 
 namespace Restorator.ViewModel
 {

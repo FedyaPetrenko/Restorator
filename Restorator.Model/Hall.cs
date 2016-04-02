@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Restorator_1._0.Model
+namespace Restorator.Model
 {
-    public class Table
+    public class Hall
     {
     }
 }

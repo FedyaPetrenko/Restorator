@@ -1,4 +1,4 @@
-﻿<Window x:Class="Restorator_1._0.View.DepotWindow"
+﻿<Window x:Class="Restorator.View.DepotWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Restorator 1.0  СКЛАД"
@@ -8,8 +8,9 @@
         ShowInTaskbar="True"
         SizeToContent="WidthAndHeight" 
         Topmost="True" 
-        Icon="/Restorator 1.0;component/Images/big_icon.png" 
-        ResizeMode="CanResize" Closed="Window_Closed" >
+        Icon="../Images/big_icon.png" 
+        ResizeMode="CanResize" 
+        Closed="Window_Closed" >
 
     <Grid>
 

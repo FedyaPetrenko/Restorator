@@ -9,13 +9,12 @@ namespace Restorator.ViewModel
         protected void OnPropertyChanged(string propertyName)
         {
             PropertyChangedEventHandler handler = PropertyChanged;
-
             handler?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         public void Dispose()
         {
-            this.OnDispose();
+            OnDispose();
         }
 
         protected virtual void OnDispose() { }

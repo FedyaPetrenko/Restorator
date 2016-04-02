@@ -1,7 +1,6 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 
-namespace Restorator_1._0.View
+namespace Restorator.View
 {
     /// <summary>
     /// Логика взаимодействия для AboutWindow.xaml
