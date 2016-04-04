@@ -24,10 +24,10 @@ namespace Restorator.Model
         public string ThirdName { get; set; }
 
         [Required]
-        [RegularExpression("([0-9][0-9][0-9])-[0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]")]
+        //[RegularExpression("([0-9][0-9][0-9])-[0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]")]
         public string PhoneNumber { get; set; }
 
-        [RegularExpression(@"^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$")]
+        //[RegularExpression(@"^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$")]
         public string Email { get; set; }
 
         [Required]
@@ -35,14 +35,13 @@ namespace Restorator.Model
         public string HomeAddress { get; set; }
 
         [Required]
-        [MaxLength(10)]
-        public string IdentificationCode { get; set; }
+        public long IdentificationCode { get; set; }
+
+       
+        //public string CardNumber { get; set; }
 
         [Required]
-        [MaxLength(10)]
-        public string CardNumber { get; set; }
-
-        public int? Salary { get; set; }
+        public int Salary { get; set; }
 
         [Required]
         [MaxLength(30)]
@@ -50,24 +49,24 @@ namespace Restorator.Model
 
         [Required]
         [MaxLength(30)]
-        public string Password { get; set; }
+        public string Password { get;set; }
 
-        private ICollection<Order> orders { get; set; }
+        //private ICollection<Order> Orders { get; set; }
 
         public Employee()
         {
-            orders = new List<Order>();
+            //Orders = new List<Order>();
         }
 
         public Employee(string login, string password)
         {
             Login = login;
             Password = password;
-            orders = new List<Order>();
+            //Orders = new List<Order>();
         }
 
         public Employee(string firstName, string secondName, string thirdName, string phoneNumber, string email,
-            string placeOfResidence, string identificationCode, int? salary, string cardNumber, string login,
+            string homeAddress, long identificationCode, int salary,/* string cardNumber,*/ string login,
             string password)
         {
             FirstName = firstName;
@@ -75,13 +74,13 @@ namespace Restorator.Model
             ThirdName = thirdName;
             PhoneNumber = phoneNumber;
             Email = email;
-            HomeAddress = placeOfResidence;
+            HomeAddress = homeAddress;
             IdentificationCode = identificationCode;
-            CardNumber = cardNumber;
+            //CardNumber = cardNumber;
             Salary = salary;
             Login = login;
             Password = password;
-            orders = new List<Order>();
+            //Orders = new List<Order>();
         }
     }
 }

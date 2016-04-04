@@ -11,49 +11,17 @@ namespace Restorator.ViewModel
     {
         public Employee Employee { get; set; }
 
-        private string _cardNumber;
-        private string _login;
-        private string _password;
-
         private string _firstName;
         private string _secondName;
         private string _thirdName;
-
         private string _phoneNumber;
         private string _email;
-        private string _placeOfResidence;
-        private string _identificationCode;
-        private int? _salary;
-
-        public string CardNumber
-        {
-            get { return _cardNumber; }
-            set
-            {
-                _cardNumber = value;
-                OnPropertyChanged(nameof(CardNumber));
-            }
-        }
-
-        public string Login
-        {
-            get { return _login; }
-            set
-            {
-                _login = value;
-                OnPropertyChanged(nameof(Login));
-            }
-        }
-
-        public string Password
-        {
-            get { return _password; }
-            set
-            {
-                _password = value;
-                OnPropertyChanged(nameof(Password));
-            }
-        }
+        private string _homeAddress;
+        private long _identificationCode;
+        //private string _cardNumber;
+        private int _salary;
+        private string _login;
+        private string _password;
 
         public string FirstName
         {
@@ -107,15 +75,15 @@ namespace Restorator.ViewModel
 
         public string HomeAddress
         {
-            get { return _placeOfResidence; }
+            get { return _homeAddress; }
             set
             {
-                _placeOfResidence = value;
+                _homeAddress = value;
                 OnPropertyChanged(nameof(HomeAddress));
             }
         }
 
-        public string IdentificationCode
+        public long IdentificationCode
         {
             get { return _identificationCode; }
             set
@@ -125,7 +93,17 @@ namespace Restorator.ViewModel
             }
         }
 
-        public int? Salary
+        //public string CardNumber
+        //{
+        //    get { return _cardNumber; }
+        //    set
+        //    {
+        //        _cardNumber = value;
+        //        OnPropertyChanged(nameof(CardNumber));
+        //    }
+        //}
+
+        public int Salary
         {
             get { return _salary; }
             set
@@ -135,6 +113,25 @@ namespace Restorator.ViewModel
             }
         }
 
+        public string Login
+        {
+            get { return _login; }
+            set
+            {
+                _login = value;
+                OnPropertyChanged(nameof(Login));
+            }
+        }
+
+        public string Password
+        {
+            get { return _password; }
+            set
+            {
+                _password = value;
+                OnPropertyChanged(nameof(Password));
+            }
+        }
 
         public RegistrationWindowViewModel()
         {
@@ -147,12 +144,14 @@ namespace Restorator.ViewModel
 
         private void SaveEmployee()
         {
-            RestoratorEdm context = new RestoratorEdm();
-            context.Employees.Add(new Employee(FirstName, SecondName, ThirdName, PhoneNumber, Email, HomeAddress,
-                IdentificationCode, Salary, CardNumber, Login, Password));
-           context.SaveChangesAsync();
-           MessageBox.Show("Reristration successful!");
-
+            using (RestoratorEdm context = new RestoratorEdm())
+            {
+                Employee = new Employee(FirstName, SecondName, ThirdName, PhoneNumber, Email, HomeAddress,
+                    IdentificationCode, Salary, /*CardNumber,*/ Login, Password);
+                context.Employees.Add(Employee);
+                context.SaveChanges();
+                MessageBox.Show("Reristration successful!");
+            }
         }
 
         private void ClearText()
@@ -163,9 +162,9 @@ namespace Restorator.ViewModel
             PhoneNumber = null;
             Email = null;
             HomeAddress = null;
-            IdentificationCode = null;
+            IdentificationCode = 0;
             Salary = 0;
-            CardNumber = null;
+            //CardNumber = null;
             Login = null;
             Password = null;
         }

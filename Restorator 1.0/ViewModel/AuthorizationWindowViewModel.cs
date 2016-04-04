@@ -1,4 +1,7 @@
-﻿using System.Windows.Input;
+﻿using System.Windows;
+using System.Windows.Input;
+using Restorator.Commands;
+using Restorator.DataAcces;
 using Restorator.View;
 
 namespace Restorator.ViewModel
@@ -30,24 +33,25 @@ namespace Restorator.ViewModel
             }
         }
 
-        //private RegistrationWindow _registrationWindow;
+        private RegistrationWindow _registrationWindow;
+
         public ICommand OpenRegistrationWindowCommand { get; set; }
         public ICommand SignInCommand { get; set; }
 
-        //public AuthorizationWindowViewModel()
-        //{
-        //    OpenRegistrationWindowCommand = new DelegateCommand(arg => OpenRegistrationWindow());
-        //    SignInCommand = new DelegateCommand(arg => SignIn());
-        //}
+        public AuthorizationWindowViewModel()
+        {
+            OpenRegistrationWindowCommand = new DelegateCommand(arg => OpenRegistrationWindow());
+            //SignInCommand = new DelegateCommand(arg => SignIn());
+        }
 
-        //private void OpenRegistrationWindow()
-        //{
-        //    _registrationWindow = new RegistrationWindow()
-        //    {
-        //        DataContext = new RegistrationWindowViewModel()
-        //    };
-        //    _registrationWindow.Show();
-        //}
+        private void OpenRegistrationWindow()
+        {
+            _registrationWindow = new RegistrationWindow()
+            {
+                DataContext = new RegistrationWindowViewModel()
+            };
+            _registrationWindow.Show();
+        }
 
         //private void SignIn()
         //{

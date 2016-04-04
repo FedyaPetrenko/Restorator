@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Restorator.Model
 {
+    [Table("Guests")]
     public class Guest
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -52,7 +53,7 @@ namespace Restorator.Model
             Orders = new List<Order>();
         }
 
-        public Guest(string firstName, string secondName, string thirdName, string phoneNumber, string email,
+        public Guest(string firstName, string secondName, string thirdName, string phoneNumber, string email, int? percentageDiscount,
             long cardNumber, string password)
         {
             FirstName = firstName;
@@ -60,6 +61,7 @@ namespace Restorator.Model
             ThirdName = thirdName;
             PhoneNumber = phoneNumber;
             Email = email;
+            PercentageDiscounts = percentageDiscount;
             CardNumber = cardNumber;
             Password = password;
             Orders = new List<Order>();

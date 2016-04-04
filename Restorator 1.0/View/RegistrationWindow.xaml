@@ -1,7 +1,8 @@
 ﻿<Window x:Class="Restorator.View.RegistrationWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Restorator 1.0 - Registration"
+        xmlns:local="clr-namespace:Restorator.ViewModel"
+        Title="Restorator - Registration"
         MinHeight="440"
         MinWidth="850"
         MaxWidth="850"
@@ -12,6 +13,10 @@
         SizeToContent="WidthAndHeight"
         Topmost="True"
         Icon="../Images/big_icon.png" Closed="Window_Closed">
+
+    <Window.DataContext>
+        <local:RegistrationWindowViewModel></local:RegistrationWindowViewModel>
+    </Window.DataContext>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -348,7 +353,7 @@
                 HorizontalAlignment="Right"
                 Margin="0,12,46,10"
                 Padding="5"
-                Command="{Binding SaveEmployeeCommand}" Click="Button_Click" />
+                Command="{Binding SaveEmployeeCommand}"/>
 
 
     </Grid>

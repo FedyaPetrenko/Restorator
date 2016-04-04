@@ -20,10 +20,10 @@ namespace Restorator.ViewModel
 
         public DepotWindowViewModel()
         {
-            RefreshCommand = new DelegateCommand(arg => ShowAllProduts());
-            DeleteCommand = new DelegateCommand(arg => DeleteSelectedProduct());
+            //RefreshCommand = new DelegateCommand(arg => ShowAllProduts());
+            //DeleteCommand = new DelegateCommand(arg => DeleteSelectedProduct());
             //AddCommand = new DelegateCommand(arg => AddProduct());
-            ShowAllProduts();
+            //ShowAllProduts();
         }
 
         public Product Product
@@ -56,23 +56,23 @@ namespace Restorator.ViewModel
             }
         }
 
-        private void ShowAllProduts()
-        {
-            RestoratorEdm context = new RestoratorEdm();
-            Products = new ObservableCollection<Product>();
-            foreach (var product in context.Products.ToList())
-            {
-                Products.Add(product);
-            }
-        }
+        //private void ShowAllProduts()
+        //{
+        //    RestoratorEdm context = new RestoratorEdm();
+        //    Products = new ObservableCollection<Product>();
+        //    foreach (var product in context.Products.ToList())
+        //    {
+        //        Products.Add(product);
+        //    }
+        //}
 
-        private void DeleteSelectedProduct()
-        {
-            RestoratorEdm context = new RestoratorEdm();
-            context.Products.Remove(SelectedProduct);
-            context.SaveChangesAsync();
-            ShowAllProduts();
-        }
+        //private void DeleteSelectedProduct()
+        //{
+        //    RestoratorEdm context = new RestoratorEdm();
+        //    context.Products.Remove(SelectedProduct);
+        //    context.SaveChangesAsync();
+        //    ShowAllProduts();
+        //}
 
         //private void AddProduct()
         //{

@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Restorator.Model
 {
+    [Table("Products")]
     public class Product
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -36,6 +37,7 @@ namespace Restorator.Model
             Description = description;
             Price = price;
             Count = count;
+            Dishes = new List<Dish>();
         }
     }
 }

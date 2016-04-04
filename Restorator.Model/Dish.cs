@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Restorator.Model
 {
+    [Table("Dishes")]
     public class Dish
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
