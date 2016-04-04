@@ -33,21 +33,20 @@ namespace Restorator.Model
         [Required]
         private DateTime Date { get; set; }
 
-        private ICollection<Dish> Dishes { get; set; }
+        private IDictionary<Dish,byte> Dishes { get; set; }
 
         public Order()
         {
-            Date = DateTime.Now;
-            Dishes = new List<Dish>();
+            Dishes = new Dictionary<Dish,byte>();
         }
 
-        public Order(Guid hallId, Guid employeeId, Guid guestId)
+        public Order(Guid hallId, Guid employeeId, Guid guestId, DateTime date )
         {
             HallId = hallId;
             EmployeeId = employeeId;
             GuestId = guestId;
-            Date = DateTime.Now;
-            Dishes = new List<Dish>();
+            Date = date;
+            Dishes = new Dictionary<Dish, byte>();
         }
     }
 }

@@ -37,8 +37,8 @@ namespace Restorator.Model
         [Required]
         public long IdentificationCode { get; set; }
 
-       
-        //public string CardNumber { get; set; }
+        [Required]
+        public string CardNumber { get; set; }
 
         [Required]
         public int Salary { get; set; }
@@ -51,22 +51,22 @@ namespace Restorator.Model
         [MaxLength(30)]
         public string Password { get;set; }
 
-        //private ICollection<Order> Orders { get; set; }
+        private ICollection<Order> Orders { get; set; }
 
         public Employee()
         {
-            //Orders = new List<Order>();
+            Orders = new List<Order>();
         }
 
         public Employee(string login, string password)
         {
             Login = login;
             Password = password;
-            //Orders = new List<Order>();
+            Orders = new List<Order>();
         }
 
         public Employee(string firstName, string secondName, string thirdName, string phoneNumber, string email,
-            string homeAddress, long identificationCode, int salary,/* string cardNumber,*/ string login,
+            string homeAddress, long identificationCode, int salary, string cardNumber, string login,
             string password)
         {
             FirstName = firstName;
@@ -76,11 +76,11 @@ namespace Restorator.Model
             Email = email;
             HomeAddress = homeAddress;
             IdentificationCode = identificationCode;
-            //CardNumber = cardNumber;
+            CardNumber = cardNumber;
             Salary = salary;
             Login = login;
             Password = password;
-            //Orders = new List<Order>();
+            Orders = new List<Order>();
         }
     }
 }

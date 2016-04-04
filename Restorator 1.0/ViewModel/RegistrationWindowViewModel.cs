@@ -1,5 +1,4 @@
-﻿using System.Data.Entity;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Input;
 using Restorator.Commands;
 using Restorator.DataAcces;
@@ -18,7 +17,7 @@ namespace Restorator.ViewModel
         private string _email;
         private string _homeAddress;
         private long _identificationCode;
-        //private string _cardNumber;
+        private string _cardNumber;
         private int _salary;
         private string _login;
         private string _password;
@@ -93,15 +92,15 @@ namespace Restorator.ViewModel
             }
         }
 
-        //public string CardNumber
-        //{
-        //    get { return _cardNumber; }
-        //    set
-        //    {
-        //        _cardNumber = value;
-        //        OnPropertyChanged(nameof(CardNumber));
-        //    }
-        //}
+        public string CardNumber
+        {
+            get { return _cardNumber; }
+            set
+            {
+                _cardNumber = value;
+                OnPropertyChanged(nameof(CardNumber));
+            }
+        }
 
         public int Salary
         {
@@ -144,10 +143,10 @@ namespace Restorator.ViewModel
 
         private void SaveEmployee()
         {
-            using (RestoratorEdm context = new RestoratorEdm())
+            using (RestoratorDb context = new RestoratorDb())
             {
                 Employee = new Employee(FirstName, SecondName, ThirdName, PhoneNumber, Email, HomeAddress,
-                    IdentificationCode, Salary, /*CardNumber,*/ Login, Password);
+                    IdentificationCode, Salary, CardNumber, Login, Password);
                 context.Employees.Add(Employee);
                 context.SaveChanges();
                 MessageBox.Show("Reristration successful!");
@@ -164,7 +163,7 @@ namespace Restorator.ViewModel
             HomeAddress = null;
             IdentificationCode = 0;
             Salary = 0;
-            //CardNumber = null;
+            CardNumber = null;
             Login = null;
             Password = null;
         }

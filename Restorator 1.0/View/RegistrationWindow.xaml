@@ -292,7 +292,7 @@
                              HorizontalAlignment="Right"
                              FontSize="20"
                              Margin="83,0,10,0"
-                             Text="{Binding CardNumber}" />
+                             Text="{Binding CardNumber}"/>
                 </StackPanel>
 
                 <StackPanel Grid.Row="4"

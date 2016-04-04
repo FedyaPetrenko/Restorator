@@ -23,16 +23,13 @@ namespace Restorator.Model
         public string ThirdName { get; set; }
 
         [Required]
-        [RegularExpression("([0-9][0-9][0-9])-[0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]")]
         public string PhoneNumber { get; set; }
 
-        [RegularExpression(@"^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$")]
         public string Email { get; set; }
 
         public int? PercentageDiscounts { get; set; }
 
         [Required]
-        [MaxLength(10)]
         public long CardNumber { get; set; }
 
         [Required]

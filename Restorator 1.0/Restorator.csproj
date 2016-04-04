@@ -81,7 +81,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Commands\DelegateCommand.cs" />
-    <Compile Include="DataAcces\RestoratorEdm.cs" />
+    <Compile Include="DataAcces\RestoratorDB.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ViewModel\AddProductWindowViewModel.cs" />
     <Compile Include="ViewModel\AuthorizationWindowViewModel.cs" />
