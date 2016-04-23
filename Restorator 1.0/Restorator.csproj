@@ -13,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,10 +27,8 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -83,10 +83,12 @@
     <Compile Include="Commands\DelegateCommand.cs" />
     <Compile Include="DataAcces\RestoratorDB.cs" />
     <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="ViewModel\AboutWindowViewModel.cs" />
     <Compile Include="ViewModel\AddProductWindowViewModel.cs" />
     <Compile Include="ViewModel\AuthorizationWindowViewModel.cs" />
     <Compile Include="ViewModel\DepotWindowViewModel.cs" />
     <Compile Include="ViewModel\MenuWindowViewModel.cs" />
+    <Compile Include="ViewModel\Observable.cs" />
     <Compile Include="ViewModel\RegistrationWindowViewModel.cs" />
     <Compile Include="ViewModel\StartWindowViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
@@ -99,6 +101,14 @@
     <Compile Include="View\MenuWindow.xaml.cs">
       <DependentUpon>MenuWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Wrapper\DishWrapper.cs" />
+    <Compile Include="Wrapper\EmployeeWrapper.cs" />
+    <Compile Include="Wrapper\GuestWrapper.cs" />
+    <Compile Include="Wrapper\HallWrapper.cs" />
+    <Compile Include="Wrapper\ModelWrapper.cs" />
+    <Compile Include="Wrapper\OrderWrapper.cs" />
+    <Compile Include="Wrapper\ProductWrapper.cs" />
+    <Compile Include="Wrapper\TableWrapper.cs" />
     <Page Include="View\AboutWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -209,9 +219,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Wrapper\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

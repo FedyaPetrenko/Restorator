@@ -11,12 +11,5 @@ namespace Restorator.View
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Visibility = Visibility.Hidden;
-            StartWindow startWindow = new StartWindow();
-            startWindow.Show();
-        }
     }
 }

@@ -1,35 +1,21 @@
-﻿using System.Windows.Input;
+﻿using System;
+using System.Linq;
+using System.Windows;
+using System.Windows.Input;
 using Restorator.Commands;
+using Restorator.DataAcces;
+using Restorator.Model;
+using Restorator.View;
 
 namespace Restorator.ViewModel
 {
-    class AddProductWindowViewModel : ViewModelBase
+    internal class AddProductWindowViewModel : ViewModelBase
     {
-        private int? _idDish;
-        private string _barCode;
         private string _name;
         private string _description;
         private int? _price;
-
-        public int? IdDish
-        {
-            get { return _idDish; }
-            set
-            {
-                _idDish = value;
-                OnPropertyChanged(nameof(IdDish));
-            }
-        }
-
-        public string BarCode
-        {
-            get { return _barCode; }
-            set
-            {
-                _barCode = value;
-                OnPropertyChanged(nameof(BarCode));
-            }
-        }
+        private int? _count;
+        private AddProductWindow _addProductWindow;
 
         public string Name
         {
@@ -61,29 +47,70 @@ namespace Restorator.ViewModel
             }
         }
 
+        public int? Count
+        {
+            get { return _count; }
+            set
+            {
+                _count = value;
+                OnPropertyChanged(nameof(Count));
+            }
+        }
+
         public ICommand SaveProductCommand { get; set; }
         public ICommand ClearTextCommand { get; set; }
 
         public AddProductWindowViewModel()
         {
-            //SaveProductCommand = new DelegateCommand(arg => SaveProduct());
+            AddProductWindowOnLoaded();
+            SaveProductCommand = new DelegateCommand(arg => SaveProduct());
             ClearTextCommand = new DelegateCommand(arg => ClearText());
         }
 
-        //private void SaveProduct()
-        //{
-        //    Connection connection = new Connection();
-        //    if (connection.AddProduct(new Product(IdDish, BarCode, Name, Description, Price)))
-        //        MessageBox.Show("Product added to the database!");
-        //}
+        private void AddProductWindowOnLoaded()
+        {
+            var windows = Application.Current.Windows;
+            foreach (var win in windows.OfType<AddProductWindow>())
+            {
+                _addProductWindow = win;
+                _addProductWindow.Closed += AddProductWindowOnClosed;
+            }
+        }
+
+        private void AddProductWindowOnClosed(object sender, EventArgs eventArgs)
+        {
+            _addProductWindow.Hide();
+            var windows = Application.Current.Windows;
+            foreach (var depotWindow in windows.OfType<DepotWindow>())
+            {
+                depotWindow.Show();
+            }
+        }
+
+        private async void SaveProduct()
+        {
+            using (var context = new RestoratorDb())
+            {
+                var product = new Product(Name, Description, Price, Count);
+                context.Products.Add(product);
+                MessageBox.Show("Product added to the database!");
+                await context.SaveChangesAsync();
+            }
+            ClearText();
+            _addProductWindow.Hide();
+            var windows = Application.Current.Windows;
+            foreach (var depotWindow in windows.OfType<DepotWindow>())
+            {
+                depotWindow.Show();
+            }
+        }
 
         private void ClearText()
         {
-            IdDish = null;
-            BarCode = null;
             Name = null;
             Description = null;
             Price = null;
+            Count = null;
         }
     }
 }

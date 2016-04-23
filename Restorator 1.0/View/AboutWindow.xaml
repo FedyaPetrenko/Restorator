@@ -3,21 +3,26 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModel="clr-namespace:Restorator.ViewModel"
         mc:Ignorable="d"
         Title="About"
-        MaxHeight="330"
-        MinHeight="330"
+        MaxHeight="360"
+        MinHeight="360"
         MaxWidth="500"
         MinWidth="500"
         WindowStartupLocation="CenterScreen"
-        WindowStyle="None"
+        WindowStyle="ToolWindow"
         ShowInTaskbar="True"
         SizeToContent="WidthAndHeight"
-        Topmost="True"
         FontWeight="Bold"
-        Icon="../Images/big_icon.png">
+        Icon="../Images/big_icon.png" 
+        AllowDrop="True">
 
-    <Grid Height="316">
+    <Window.DataContext>
+        <viewModel:AboutWindowViewModel></viewModel:AboutWindowViewModel>
+    </Window.DataContext>
+
+    <Grid>
         
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -67,7 +72,8 @@
             <TextBox
                 VerticalAlignment="Stretch"
                 HorizontalAlignment="Left"
-                Margin="0,0,-9,0" Background="{x:Null}"
+                Margin="0,0,-9,0" 
+                Background="{x:Null}"
                 BorderBrush="{x:Null}"
                 Text="     Program is created for automation of any restaurant. You can control the circulation of goods in stock, add new ones and delete that are not needed. Our manager has the ability to add new employees and guests, giving them a discount to the size of the order. Guests can choose meals and immediately receive a check for payment."
                 FontStyle="Italic"
@@ -115,6 +121,7 @@
                 Grid.Row="1"
                 VerticalAlignment="Top"
                 Width="88"
-                Height="57" Click="Button_Click" />
+                Height="57"
+                Command="{Binding CloseAboutWindowCommand}"/>
     </Grid>
 </Window>

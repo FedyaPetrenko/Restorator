@@ -12,8 +12,7 @@
         Topmost="True"
         FontWeight="Bold" 
         ResizeMode="CanResize"
-        Icon="../Images/big_icon.png" 
-        Closed="Window_Closed" >
+        Icon="../Images/big_icon.png">
     
     <Grid Background="#FFFBC02D" Margin="0" HorizontalAlignment="Right" Width="1222">
 

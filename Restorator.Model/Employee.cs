@@ -51,7 +51,7 @@ namespace Restorator.Model
         [MaxLength(30)]
         public string Password { get;set; }
 
-        private ICollection<Order> Orders { get; set; }
+        public ICollection<Order> Orders { get; set; }
 
         public Employee()
         {

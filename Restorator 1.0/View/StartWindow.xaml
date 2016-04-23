@@ -57,10 +57,10 @@
                 FontWeight="Normal"
                 FontStyle="Italic"
                 FontFamily="Tempus Sans ITC"
-                Click="ButtonAbout_Click"
                 FontSize="16"
                 BorderBrush="#FF090909"
-                Background="#FFFF9000" />
+                Background="#FFFF9000"
+                Command="{Binding OpenAboutWindowCommand}"/>
 
         <Image Source="../Images/restaurant.jpg"
                Grid.Row="1"

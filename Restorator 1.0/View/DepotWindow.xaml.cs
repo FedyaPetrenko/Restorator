@@ -11,18 +11,5 @@ namespace Restorator.View
         {
             InitializeComponent();
         }
-
-        private void Window_Closed(object sender, System.EventArgs e)
-        {
-            Visibility = Visibility.Hidden;
-            StartWindow startWindow = new StartWindow {Visibility = Visibility.Visible};
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Visibility = Visibility.Hidden;
-            AddProductWindow addProductWindow = new AddProductWindow();
-            addProductWindow.Show();
-        }
     }
 }

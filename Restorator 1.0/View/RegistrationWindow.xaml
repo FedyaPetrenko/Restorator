@@ -12,7 +12,7 @@
         ShowInTaskbar="True"
         SizeToContent="WidthAndHeight"
         Topmost="True"
-        Icon="../Images/big_icon.png" Closed="Window_Closed">
+        Icon="../Images/big_icon.png">
 
     <Window.DataContext>
         <local:RegistrationWindowViewModel></local:RegistrationWindowViewModel>

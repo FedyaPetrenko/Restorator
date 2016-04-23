@@ -31,9 +31,9 @@ namespace Restorator.Model
         public Guest Guest { get; set; }
 
         [Required]
-        private DateTime Date { get; set; }
+        public DateTime Date { get; set; }
 
-        private IDictionary<Dish,byte> Dishes { get; set; }
+        public IDictionary<Dish,byte> Dishes { get; set; }
 
         public Order()
         {
@@ -45,7 +45,7 @@ namespace Restorator.Model
             HallId = hallId;
             EmployeeId = employeeId;
             GuestId = guestId;
-            Date = date;
+            Date = DateTime.Now;
             Dishes = new Dictionary<Dish, byte>();
         }
     }

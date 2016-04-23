@@ -36,7 +36,7 @@ namespace Restorator.Model
         [MaxLength(20)]
         public string Password { get; set; }
 
-        private ICollection<Order> Orders { get; set; }
+        public ICollection<Order> Orders { get; set; }
 
         public Guest()
         {

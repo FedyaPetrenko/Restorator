@@ -28,9 +28,9 @@ namespace Restorator.Model
 
         public int Price { get; set; }
 
-        private ICollection<Order> Orders { get; set; }
+        public ICollection<Order> Orders { get; set; }
 
-        private ICollection<Product> Products { get; set; }
+        public ICollection<Product> Products { get; set; }
 
         public Dish()
         {

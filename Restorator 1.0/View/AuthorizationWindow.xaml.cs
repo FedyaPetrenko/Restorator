@@ -12,27 +12,5 @@ namespace Restorator.View
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            //    StartWindow startWindow = new StartWindow
-            //    {
-            //        GoToAuthorization = {IsEnabled = true},
-            //        GoToStorageButton = {IsEnabled = true}
-            //    };
-            Visibility = Visibility.Hidden;
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            Visibility = Visibility.Hidden;
-            RegistrationWindow registrationWindow = new RegistrationWindow();
-            registrationWindow.Show();
-        }
-
-        private void Window_Closed(object sender, EventArgs e)
-        {
-            new StartWindow {Visibility = Visibility.Visible};
-        }
     }
 }

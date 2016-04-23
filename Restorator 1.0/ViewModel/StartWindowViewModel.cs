@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System.Windows;
+using System.Windows.Input;
 using Restorator.Commands;
 using Restorator.View;
 
@@ -9,16 +10,28 @@ namespace Restorator.ViewModel
         private static DepotWindow _depotWindow;
         private static AuthorizationWindow _authorizationWindow;
         private static MenuWindow _menuWindow;
-
+       
         public ICommand OpenDepotWindowCommand { get; set; }
         public ICommand OpenAuthorizationWindowCommand { get; set; }
         public ICommand OpenMenuWindowCommand { get; set; }
+        public ICommand OpenAboutWindowCommand { get; set; }
 
         public StartWindowViewModel()
         {
             OpenDepotWindowCommand = new DelegateCommand(arg => OpenDepotWindow());
             OpenAuthorizationWindowCommand = new DelegateCommand(arg => OpenAuthorizationWindow());
             OpenMenuWindowCommand = new DelegateCommand(arg => OpenMenuWindow());
+            OpenAboutWindowCommand = new DelegateCommand(arg => OpenAboutWindow());
+        }
+
+        private void OpenAboutWindow()
+        {
+            AboutWindow aboutWindow = new AboutWindow()
+            {
+                DataContext = new AboutWindowViewModel()
+            };
+           aboutWindow.Show();
+           Application.Current.MainWindow.Hide();
         }
 
         private void OpenDepotWindow()
@@ -28,6 +41,8 @@ namespace Restorator.ViewModel
                 DataContext = new DepotWindowViewModel()
             };
             _depotWindow.Show();
+           Application.Current.MainWindow.Hide();
+            
         }
 
         private void OpenAuthorizationWindow()
