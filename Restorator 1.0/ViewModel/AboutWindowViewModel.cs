@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using Restorator.Commands;
@@ -24,16 +21,12 @@ namespace Restorator.ViewModel
 
         private void CloseAboutWindow()
         {
-            WindowCollection windowCollection = Application.Current.Windows;
-            foreach (var window in windowCollection)
+            _aboutWindow.Hide();
+            WindowCollection windows = Application.Current.Windows;
+            foreach (var startWindow in windows.OfType<StartWindow>())
             {
-                var checkedAboutWindow = window as AboutWindow;
-                var checkedStartWindow = window as StartWindow;
-
-                checkedAboutWindow?.Hide();
-                checkedStartWindow?.Show();
+                startWindow.Show();
             }
-            
         }
 
         private void AboutWindowOnLoaded()
@@ -42,19 +35,13 @@ namespace Restorator.ViewModel
             foreach (var win in windows.OfType<AboutWindow>())
             {
                 _aboutWindow = win;
-                _aboutWindow.Closed += DepotOnClosed;
+                _aboutWindow.Closed += AboutWindowOnClosed;
             }
-
         }
 
-        private void DepotOnClosed(object sender, EventArgs eventArgs)
+        private void AboutWindowOnClosed(object sender, EventArgs eventArgs)
         {
-            _aboutWindow.Hide();
-            WindowCollection windows = Application.Current.Windows;
-            foreach (var startWindow in windows.OfType<StartWindow>())
-            {
-                startWindow.Show();
-            }
+            CloseAboutWindow();
         }
     }
 }

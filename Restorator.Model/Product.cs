@@ -24,11 +24,10 @@ namespace Restorator.Model
         [Required]
         public int? Count { get; set; }
 
-        public ICollection<Dish> Dishes { get; set; }
+        public virtual ICollection<Dish> Dishes { get; set; } = new List<Dish>();
 
         public Product()
         {
-            Dishes = new List<Dish>();
         }
 
         public Product(string name, string description, int? price, int? count)
@@ -37,7 +36,6 @@ namespace Restorator.Model
             Description = description;
             Price = price;
             Count = count;
-            Dishes = new List<Dish>();
         }
     }
 }

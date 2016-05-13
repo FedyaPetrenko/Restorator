@@ -22,22 +22,21 @@ namespace Restorator.Model
         public Guid GuestId { get; set; }
 
         [ForeignKey("HallId")]
-        public Hall Hall { get; set; }
+        public virtual Hall Hall { get; set; }
 
         [ForeignKey("EmployeeId")]
-        public Employee Employee { get; set; }
+        public virtual Employee Employee { get; set; }
 
         [ForeignKey("GuestId")]
-        public Guest Guest { get; set; }
+        public virtual Guest Guest { get; set; }
 
         [Required]
         public DateTime Date { get; set; }
 
-        public IDictionary<Dish,byte> Dishes { get; set; }
+        public virtual IDictionary<Dish,byte> Dishes { get; set; } = new Dictionary<Dish, byte>();
 
         public Order()
         {
-            Dishes = new Dictionary<Dish,byte>();
         }
 
         public Order(Guid hallId, Guid employeeId, Guid guestId, DateTime date )
@@ -46,7 +45,6 @@ namespace Restorator.Model
             EmployeeId = employeeId;
             GuestId = guestId;
             Date = DateTime.Now;
-            Dishes = new Dictionary<Dish, byte>();
         }
     }
 }

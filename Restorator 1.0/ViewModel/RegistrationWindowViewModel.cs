@@ -1,26 +1,30 @@
-﻿using System.Windows;
+﻿using System.Linq;
+using System.Windows;
 using System.Windows.Input;
 using Restorator.Commands;
 using Restorator.DataAcces;
 using Restorator.Model;
+using Restorator.View;
 
 namespace Restorator.ViewModel
 {
     class RegistrationWindowViewModel : ViewModelBase
     {
-        public Employee Employee { get; set; }
-
+        private RegistrationWindow _registrationWindow;
+        
         private string _firstName;
         private string _secondName;
         private string _thirdName;
         private string _phoneNumber;
         private string _email;
         private string _homeAddress;
-        private long _identificationCode;
+        private long? _identificationCode;
         private string _cardNumber;
-        private int _salary;
+        private int? _salary;
         private string _login;
         private string _password;
+
+        public Employee Employee { get; set; }
 
         public string FirstName
         {
@@ -82,7 +86,7 @@ namespace Restorator.ViewModel
             }
         }
 
-        public long IdentificationCode
+        public long? IdentificationCode
         {
             get { return _identificationCode; }
             set
@@ -102,7 +106,7 @@ namespace Restorator.ViewModel
             }
         }
 
-        public int Salary
+        public int? Salary
         {
             get { return _salary; }
             set
@@ -134,6 +138,7 @@ namespace Restorator.ViewModel
 
         public RegistrationWindowViewModel()
         {
+            RegistrationWindowInitializing();
             SaveEmployeeCommand = new DelegateCommand(arg => SaveEmployee());
             ClearTextCommand = new DelegateCommand(arg => ClearText());
         }
@@ -141,16 +146,39 @@ namespace Restorator.ViewModel
         public ICommand SaveEmployeeCommand { get; set; }
         public ICommand ClearTextCommand { get; set; }
 
-        private void SaveEmployee()
+        private void RegistrationWindowInitializing()
         {
-            using (RestoratorDb context = new RestoratorDb())
+            var windows = Application.Current.Windows;
+            foreach (var win in windows.OfType<RegistrationWindow>())
+            {
+                _registrationWindow = win;
+                _registrationWindow.Closed += (sender, e) => { _registrationWindow.Close(); };
+            }
+        }
+
+        private async void SaveEmployee()
+        {
+            if (CheckFieldsForNull())
             {
                 Employee = new Employee(FirstName, SecondName, ThirdName, PhoneNumber, Email, HomeAddress,
-                    IdentificationCode, Salary, CardNumber, Login, Password);
-                context.Employees.Add(Employee);
-                context.SaveChanges();
+                    IdentificationCode, Salary, CardNumber, Login, Password,
+                    AuthorizationWindowViewModel.GetMd5(Login + Password));
+                using (RestoratorDb context = new RestoratorDb())
+                {
+                    context.Employees.Add(Employee);
+                    await context.SaveChangesAsync();
+                }
                 MessageBox.Show("Reristration successful!");
+                _registrationWindow.Hide();
             }
+            else
+                MessageBox.Show("Enter information in all fields!");
+        }
+
+        private bool CheckFieldsForNull()
+        {
+            return FirstName != null && SecondName != null && ThirdName != null && PhoneNumber != null && Email != null &&
+                   HomeAddress != null && IdentificationCode != null && Salary != null && CardNumber != null && Login != null && Password != null;
         }
 
         private void ClearText()
@@ -161,8 +189,8 @@ namespace Restorator.ViewModel
             PhoneNumber = null;
             Email = null;
             HomeAddress = null;
-            IdentificationCode = 0;
-            Salary = 0;
+            IdentificationCode = null;
+            Salary = null;
             CardNumber = null;
             Login = null;
             Password = null;

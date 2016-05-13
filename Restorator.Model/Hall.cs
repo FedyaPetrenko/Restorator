@@ -11,14 +11,12 @@ namespace Restorator.Model
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid HallId { get; set; }
 
-        public ICollection<Order> Orders { get; set; } 
+        public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 
-        public ICollection<Table> Tables { get; set; } 
+        public virtual ICollection<Table> Tables { get; set; } = new List<Table>();
 
         public Hall()
         {
-            Orders = new List<Order>();
-            Tables = new List<Table>();
         }
     }
 }

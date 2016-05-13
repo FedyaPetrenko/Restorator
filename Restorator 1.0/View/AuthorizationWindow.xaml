@@ -4,8 +4,8 @@
         xmlns:local="clr-namespace:Restorator.ViewModel"
         Title="Restorator - Authotization"
         MaxHeight="250"
-        MaxWidth="320"
-        MinWidth="320"
+        MaxWidth="333"
+        MinWidth="333"
         MinHeight="250"
         WindowStartupLocation="CenterScreen"
         WindowStyle="ToolWindow"
@@ -28,7 +28,7 @@
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="333" />
         </Grid.ColumnDefinitions>
 
         <Label Content="Authorization"
@@ -45,7 +45,7 @@
                     Orientation="Horizontal"
                     Width="auto"
                     Height="auto"
-                    Margin="5,0,5,10">
+                    Margin="0,0,5,10">
 
             <Label Content="Login:"
                    FontSize="21.333"
@@ -54,7 +54,7 @@
                    Margin="10,0,28,0"
                    Style="{StaticResource LabelStyle}" />
 
-            <TextBox Width="170"
+            <TextBox Width="190"
                      Height="30"
                      HorizontalAlignment="Right"
                      Margin="15,0,10,0"
@@ -65,7 +65,7 @@
 
         <StackPanel Grid.Row="2"
                     Orientation="Horizontal"
-                    Margin="5,0,5,0">
+                    Margin="0,0,5,0">
 
             <Label Content="Password:"
                    FontSize="21.333"
@@ -74,12 +74,12 @@
                    Margin="10,0,5,0"
                    Style="{StaticResource LabelStyle}" />
 
-            <TextBox Width="170"
+            <TextBox Name="PasswordBox"
+                     Width="190"
                      Height="30"
                      HorizontalAlignment="Right"
-                     FontSize="20"
-                     Text="{Binding Password}" />
-
+                     FontSize="20" 
+                     Text="{Binding Password}"/>
         </StackPanel>
 
         <StackPanel Grid.Row="3"
@@ -89,14 +89,21 @@
             <Button Content="Sign in"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"
-                    Margin="15,10,55,10"
+                    Margin="10,10,0,10"
                     Padding="5"
                     Command="{Binding SignInCommand}"/>
 
             <Button Content="Registration"
                     HorizontalAlignment="Right"
-                    Margin="30,10,15,10"
+                    Margin="10,10,0,10"
                     Command="{Binding OpenRegistrationWindowCommand}"/>
+
+            <Button Content="Sign out"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Left"
+                    Margin="10,10,0,10"
+                    Padding="5"
+                    Command="{Binding SignOutCommand}"/>
 
         </StackPanel>
     </Grid>

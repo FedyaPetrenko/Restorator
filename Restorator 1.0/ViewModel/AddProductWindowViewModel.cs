@@ -16,7 +16,7 @@ namespace Restorator.ViewModel
         private int? _price;
         private int? _count;
         private AddProductWindow _addProductWindow;
-
+        
         public string Name
         {
             get { return _name; }
@@ -79,24 +79,24 @@ namespace Restorator.ViewModel
 
         private void AddProductWindowOnClosed(object sender, EventArgs eventArgs)
         {
-            _addProductWindow.Hide();
-            var windows = Application.Current.Windows;
-            foreach (var depotWindow in windows.OfType<DepotWindow>())
-            {
-                depotWindow.Show();
-            }
+            CloseAddProductWindowAndShowDepotWindow();
         }
 
         private async void SaveProduct()
         {
+            var product = new Product(Name, Description, Price, Count);
             using (var context = new RestoratorDb())
             {
-                var product = new Product(Name, Description, Price, Count);
                 context.Products.Add(product);
-                MessageBox.Show("Product added to the database!");
                 await context.SaveChangesAsync();
             }
+            MessageBox.Show("Product added to the database!");
             ClearText();
+            CloseAddProductWindowAndShowDepotWindow();
+        }
+
+        private void CloseAddProductWindowAndShowDepotWindow()
+        {
             _addProductWindow.Hide();
             var windows = Application.Current.Windows;
             foreach (var depotWindow in windows.OfType<DepotWindow>())

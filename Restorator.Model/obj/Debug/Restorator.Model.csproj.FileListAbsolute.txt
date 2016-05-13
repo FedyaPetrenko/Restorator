@@ -1,0 +1,5 @@
+E:\Labs\4 semester\ООП 2\Restorator\Restorator.Model\bin\Debug\Restorator.Model.dll
+E:\Labs\4 semester\ООП 2\Restorator\Restorator.Model\bin\Debug\Restorator.Model.pdb
+E:\Labs\4 semester\ООП 2\Restorator\Restorator.Model\obj\Debug\Restorator.Model.csprojResolveAssemblyReference.cache
+E:\Labs\4 semester\ООП 2\Restorator\Restorator.Model\obj\Debug\Restorator.Model.dll
+E:\Labs\4 semester\ООП 2\Restorator\Restorator.Model\obj\Debug\Restorator.Model.pdb

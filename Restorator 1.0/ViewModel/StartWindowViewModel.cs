@@ -1,16 +1,17 @@
-﻿using System.Windows;
+﻿using System;
+using System.Linq;
+using System.Windows;
 using System.Windows.Input;
 using Restorator.Commands;
+using Restorator.Properties;
 using Restorator.View;
 
 namespace Restorator.ViewModel
 {
-    class StartWindowViewModel : ViewModelBase
+    internal class StartWindowViewModel : ViewModelBase
     {
-        private static DepotWindow _depotWindow;
-        private static AuthorizationWindow _authorizationWindow;
-        private static MenuWindow _menuWindow;
-       
+        private StartWindow _startWindow;
+        
         public ICommand OpenDepotWindowCommand { get; set; }
         public ICommand OpenAuthorizationWindowCommand { get; set; }
         public ICommand OpenMenuWindowCommand { get; set; }
@@ -18,49 +19,79 @@ namespace Restorator.ViewModel
 
         public StartWindowViewModel()
         {
+            StartWindowInitializing();
             OpenDepotWindowCommand = new DelegateCommand(arg => OpenDepotWindow());
             OpenAuthorizationWindowCommand = new DelegateCommand(arg => OpenAuthorizationWindow());
             OpenMenuWindowCommand = new DelegateCommand(arg => OpenMenuWindow());
             OpenAboutWindowCommand = new DelegateCommand(arg => OpenAboutWindow());
         }
 
+        private void StartWindowInitializing()
+        {
+            var windows = Application.Current.Windows;
+            foreach (var win in windows.OfType<StartWindow>())
+            {
+                _startWindow = win;
+                _startWindow.Activated += StartWindowOnActivated;
+                _startWindow.Closing += (sender, e) => 
+                {
+                    Settings.Default.Token = "";
+                    Settings.Default.Save();
+                    Application.Current.Shutdown();
+                };
+            }
+        }
+
+        private void StartWindowOnActivated(object sender, EventArgs e)
+        {
+            if (Settings.Default.Token == "")
+            {
+                _startWindow.MenuButton.IsEnabled = false;
+                _startWindow.StorageButton.IsEnabled = false;
+            }
+            else
+            {
+                _startWindow.MenuButton.IsEnabled = true;
+                _startWindow.StorageButton.IsEnabled = true;
+            }
+        }
+
         private void OpenAboutWindow()
         {
-            AboutWindow aboutWindow = new AboutWindow()
+            var aboutWindow = new AboutWindow
             {
                 DataContext = new AboutWindowViewModel()
             };
-           aboutWindow.Show();
-           Application.Current.MainWindow.Hide();
+            aboutWindow.Show();
+            Application.Current.MainWindow.Hide();
         }
 
         private void OpenDepotWindow()
         {
-            _depotWindow = new DepotWindow()
+            var depotWindow = new DepotWindow
             {
                 DataContext = new DepotWindowViewModel()
             };
-            _depotWindow.Show();
-           Application.Current.MainWindow.Hide();
-            
+            depotWindow.Show();
+            Application.Current.MainWindow.Hide();
         }
 
         private void OpenAuthorizationWindow()
         {
-            _authorizationWindow = new AuthorizationWindow
+            var authorizationWindow = new AuthorizationWindow
             {
                 DataContext = new AuthorizationWindowViewModel()
             };
-            _authorizationWindow.Show();
+            authorizationWindow.Show();
         }
 
         private void OpenMenuWindow()
         {
-            _menuWindow = new MenuWindow()
+            var menuWindow = new MenuWindow
             {
                 DataContext = new MenuWindowViewModel()
             };
-            _menuWindow.Show();
+            menuWindow.Show();
         }
     }
 }

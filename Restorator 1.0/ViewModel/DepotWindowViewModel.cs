@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data.Entity;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Threading;
 using Restorator.Commands;
 using Restorator.DataAcces;
 using Restorator.Model;
@@ -17,31 +21,28 @@ namespace Restorator.ViewModel
         private ObservableCollection<Product> _products;
         private DepotWindow _depot;
 
-        public ICommand DeleteCommand { get; set; }
-        public ICommand AddCommand { get; set; }
-        public ICommand RefreshCommand { get; set; }
-        public ICommand SaveCommand { get; set; }
+        public ICommand DeleteProductCommand { get; set; }
+        public ICommand AddProductCommand { get; set; }
+        public ICommand RefreshTableWithProductsCommand { get; set; }
+        public ICommand SaveChangesInProductTableCommand { get; set; }
 
         public DepotWindowViewModel()
         {
-            DepotOnLoaded();
-            ShowAllProduts();
-            DeleteCommand = new DelegateCommand(arg => DeleteSelectedProduct());
-            AddCommand = new DelegateCommand(arg => AddProduct());
-            RefreshCommand = new DelegateCommand(arg => ShowAllProduts());
-            SaveCommand = new DelegateCommand(arg => ChangeSelectedProduct());
+            DepotInitializing();
+            DeleteProductCommand = new DelegateCommand(arg => DeleteSelectedProduct());
+            AddProductCommand = new DelegateCommand(arg => AddProduct());
+            RefreshTableWithProductsCommand = new DelegateCommand(arg => ShowAllProduts());
+            SaveChangesInProductTableCommand = new DelegateCommand(arg => SaveChangesInProducts());
         }
 
-        private async void ChangeSelectedProduct()
+        private async void SaveChangesInProducts()
         {
             using (var context = new RestoratorDb())
             {
                 var products = await context.Products.ToListAsync();
                 for (var i = 0; i < Products.Count; i++)
                 {
-                    if (Products[i].Name != products[i].Name || Products[i].Description != products[i].Description ||
-                        Products[i].Price != products[i].Price ||
-                        Products[i].Count != products[i].Count && Products[i].ProductId == products[i].ProductId)
+                    if (CheckForChangeInProduct(i, products))
                     {
                         var product = Products[i];
                         products[i].Name = product.Name;
@@ -58,14 +59,28 @@ namespace Restorator.ViewModel
             }
         }
 
-        private void DepotOnLoaded()
+        private bool CheckForChangeInProduct(int i, List<Product> products)
+        {
+            return Products[i].Name != products[i].Name || Products[i].Description != products[i].Description ||
+                   Products[i].Price != products[i].Price ||
+                   Products[i].Count != products[i].Count && Products[i].ProductId == products[i].ProductId;
+        }
+
+        private void DepotInitializing()
         {
             var windows = Application.Current.Windows;
             foreach (var win in windows.OfType<DepotWindow>())
             {
                 _depot = win;
+                _depot.Loaded += DepotOnLoaded;
                 _depot.Closed += DepotOnClosed;
             }
+        }
+
+        private void DepotOnLoaded(object sender, RoutedEventArgs e)
+        {
+            Thread thread = new Thread(ShowAllProduts);
+            thread.Start();
         }
 
         private void DepotOnClosed(object sender, EventArgs eventArgs)
@@ -98,7 +113,13 @@ namespace Restorator.ViewModel
             }
         }
 
-        private async void ShowAllProduts()
+        private void ShowAllProduts()
+        {
+            ThreadStart threadStart = GetAllProductsFromDatabase;
+            _depot.Dispatcher.BeginInvoke(DispatcherPriority.Normal, threadStart);
+        }
+
+        private async void GetAllProductsFromDatabase()
         {
             using (var context = new RestoratorDb())
             {
@@ -119,8 +140,8 @@ namespace Restorator.ViewModel
                 else
                     MessageBox.Show("Select one of the produts in the table!");
                 await context.SaveChangesAsync();
-                ShowAllProduts();
             }
+            ShowAllProduts();
         }
 
         private void AddProduct()

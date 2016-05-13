@@ -26,27 +26,23 @@ namespace Restorator.Model
         [MaxLength(100)]
         public string Composition { get; set; }
 
-        public int Price { get; set; }
+        public int? Price { get; set; }
 
-        public ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 
-        public ICollection<Product> Products { get; set; }
+        public virtual ICollection<Product> Products { get; set; } = new List<Product>();
 
         public Dish()
         {
-            Orders = new List<Order>();
-            Products = new List<Product>();
         }
 
-        public Dish(string name, string typeOfMeals, int weight, string composition, int price)
+        public Dish(string name, string typeOfMeals, int? weight, string composition, int? price)
         {
             Name = name;
             TypeOfMeals = typeOfMeals;
             Weight = weight;
             Composition = composition;
             Price = price;
-            Orders = new List<Order>();
-            Products = new List<Product>();
         }
     }
 }

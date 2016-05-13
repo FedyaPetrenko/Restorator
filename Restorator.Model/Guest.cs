@@ -30,28 +30,26 @@ namespace Restorator.Model
         public int? PercentageDiscounts { get; set; }
 
         [Required]
-        public long CardNumber { get; set; }
+        public long? CardNumber { get; set; }
 
         [Required]
         [MaxLength(20)]
         public string Password { get; set; }
 
-        public ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 
         public Guest()
         {
-            Orders = new List<Order>();
         }
 
         public Guest(long cardNumber, string password)
         {
             CardNumber = cardNumber;
             Password = password;
-            Orders = new List<Order>();
         }
 
         public Guest(string firstName, string secondName, string thirdName, string phoneNumber, string email, int? percentageDiscount,
-            long cardNumber, string password)
+            long? cardNumber, string password)
         {
             FirstName = firstName;
             SecondName = secondName;
@@ -61,7 +59,6 @@ namespace Restorator.Model
             PercentageDiscounts = percentageDiscount;
             CardNumber = cardNumber;
             Password = password;
-            Orders = new List<Order>();
         }
     }
 }

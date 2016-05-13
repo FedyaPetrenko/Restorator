@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Restorator.ViewModel"
         mc:Ignorable="d"
-        Title="Restorator"
+        Title="Restorator - Main"
         MaxHeight="510"
         MinHeight="480"
         MaxWidth="400"
@@ -14,10 +14,9 @@
         WindowStyle="ToolWindow"
         ShowInTaskbar="True"
         SizeToContent="WidthAndHeight"
-        Topmost="True"
+        Topmost="False"
         FontWeight="Bold"
-        Icon="../Images/big_icon.png"
-        Closed="Window_Closed">
+        Icon="../Images/big_icon.png">
 
     <Window.DataContext>
         <local:StartWindowViewModel></local:StartWindowViewModel>
@@ -65,14 +64,15 @@
         <Image Source="../Images/restaurant.jpg"
                Grid.Row="1"
                Margin="5,0,5,5"
-               Width="400" />
+               Width="auto" />
 
         <StackPanel Grid.Row="2"
                     Orientation="Horizontal"
                     HorizontalAlignment="Center"
                     Margin="0,0,0,10">
 
-            <Button Content="MENU"
+            <Button Name="MenuButton"
+                    Content="MENU"
                     Margin="10,0,0,0"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Top"
@@ -82,8 +82,7 @@
                     Height="50"
                     Command="{Binding OpenMenuWindowCommand}"/>
 
-            <Button x:Name="GoToAuthorization"
-                    Content="AUTHORIZATION"
+            <Button Content="AUTHORIZATION"
                     Margin="10,0,10,0"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Top"
@@ -94,7 +93,7 @@
                     Command="{Binding OpenAuthorizationWindowCommand}"
                     ToolTip="To register a new employee, open authorization!"/>
 
-            <Button x:Name="GoToStorageButton"
+            <Button Name="StorageButton"
                     Content="STORAGE"
                     Margin="0,0,10,0"
                     HorizontalAlignment="Right"
@@ -123,7 +122,7 @@
                    BorderThickness="0"
                    Margin="10,0,10,0" />
 
-            <Label Content="@ Copyright 2015"
+            <Label Content="@ Copyright 2016"
                    Foreground="#FF212121"
                    FontFamily="Wide Latin"
                    HorizontalAlignment="Center"

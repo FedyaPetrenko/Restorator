@@ -87,7 +87,7 @@
                     Height="39"
                     MinWidth="150"
                     MinHeight="35"
-                    Command="{Binding AddCommand}"
+                    Command="{Binding AddProductCommand}"
                     VerticalAlignment="Bottom"/>
 
             <Button Content="Delete"
@@ -97,7 +97,7 @@
                     Height="auto"
                     MinWidth="100"
                     MinHeight="35"
-                    Command="{Binding DeleteCommand}" />
+                    Command="{Binding DeleteProductCommand}" />
 
             <Button Content="Refresh"
                     HorizontalAlignment="Left"
@@ -106,7 +106,7 @@
                     Height="auto"
                     MinWidth="100"
                     MinHeight="35"
-                    Command="{Binding RefreshCommand}"/>
+                    Command="{Binding RefreshTableWithProductsCommand}"/>
 
             <Button Content="Save changes"
                     HorizontalAlignment="Left"
@@ -115,7 +115,7 @@
                     Height="auto"
                     MinWidth="100"
                     MinHeight="35"
-                    Command="{Binding SaveCommand}"/>
+                    Command="{Binding SaveChangesInProductTableCommand}"/>
         </StackPanel>
     </Grid>
 </Window>
