@@ -28,7 +28,7 @@
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="333" />
+            <ColumnDefinition Width="auto" />
         </Grid.ColumnDefinitions>
 
         <Label Content="Authorization"
@@ -45,7 +45,7 @@
                     Orientation="Horizontal"
                     Width="auto"
                     Height="auto"
-                    Margin="0,0,5,10">
+                    Margin="0,0,0,10">
 
             <Label Content="Login:"
                    FontSize="21.333"
@@ -59,13 +59,15 @@
                      HorizontalAlignment="Right"
                      Margin="15,0,10,0"
                      FontSize="20"
-                     Text="{Binding Login}" />
+                     Text="{Binding Login}" 
+                     Background="White" 
+                     AutomationProperties.HelpText="Enter your login" />
 
         </StackPanel>
 
         <StackPanel Grid.Row="2"
                     Orientation="Horizontal"
-                    Margin="0,0,5,0">
+                    Margin="0,0,0,0">
 
             <Label Content="Password:"
                    FontSize="21.333"
@@ -86,7 +88,8 @@
                     Orientation="Horizontal"
                     Margin="5,0,5,0">
 
-            <Button Content="Sign in"
+            <Button Name="SignInButton" 
+                    Content="Sign in"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"
                     Margin="10,10,0,10"

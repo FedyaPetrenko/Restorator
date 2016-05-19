@@ -5,29 +5,39 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Restorator.Model
 {
-    [Table("Products")]
+    //[Table("Products")]
     public class Product
     {
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        //[Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid ProductId { get; set; }
 
-        [Required]
-        [MaxLength(30)]
+        //[Required]
+        //[MaxLength(30)]
         public string Name { get; set; }
 
-        [MaxLength(50)]
+        //[MaxLength(50)]
         public string Description { get; set; }
 
-        [Required]
+        //[Required]
         public int? Price { get; set; }
 
-        [Required]
+        //[Required]
         public int? Count { get; set; }
 
-        public virtual ICollection<Dish> Dishes { get; set; } = new List<Dish>();
+        public string Dishes { get; set; }
+        //public virtual ICollection<Dish> Dishes { get; set; } = new List<Dish>();
 
         public Product()
         {
+        }
+
+        public Product(Guid id, string name, string description, int? price, int? count)
+        {
+            ProductId = id;
+            Name = name;
+            Description = description;
+            Price = price;
+            Count = count;
         }
 
         public Product(string name, string description, int? price, int? count)

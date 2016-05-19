@@ -44,16 +44,16 @@ namespace Restorator.ViewModel
 
         private void StartWindowOnActivated(object sender, EventArgs e)
         {
-            if (Settings.Default.Token == "")
-            {
-                _startWindow.MenuButton.IsEnabled = false;
-                _startWindow.StorageButton.IsEnabled = false;
-            }
-            else
-            {
-                _startWindow.MenuButton.IsEnabled = true;
-                _startWindow.StorageButton.IsEnabled = true;
-            }
+            //if (Settings.Default.Token == "")
+            //{
+            //    _startWindow.MenuButton.IsEnabled = false;
+            //    _startWindow.StorageButton.IsEnabled = false;
+            //}
+            //else
+            //{
+            //    _startWindow.MenuButton.IsEnabled = true;
+            //    _startWindow.StorageButton.IsEnabled = true;
+            //}
         }
 
         private void OpenAboutWindow()

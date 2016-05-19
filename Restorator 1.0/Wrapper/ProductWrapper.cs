@@ -18,7 +18,7 @@ namespace Restorator.Wrapper
             {
                 throw new ArgumentException("Dishes cannot be empty!");
             }
-            Dishes = new ObservableCollection<DishWrapper>(model.Dishes.Select(dish => new DishWrapper(dish)));
+            //Dishes = new ObservableCollection<DishWrapper>(model.Dishes.Select(dish => new DishWrapper(dish)));
         }
 
         public string Name

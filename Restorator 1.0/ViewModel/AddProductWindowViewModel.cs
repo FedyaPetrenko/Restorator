@@ -63,7 +63,7 @@ namespace Restorator.ViewModel
         public AddProductWindowViewModel()
         {
             AddProductWindowOnLoaded();
-            SaveProductCommand = new DelegateCommand(arg => SaveProduct());
+            SaveProductCommand = new DelegateCommand(arg => SaveProductAsync());
             ClearTextCommand = new DelegateCommand(arg => ClearText());
         }
 
@@ -82,17 +82,38 @@ namespace Restorator.ViewModel
             CloseAddProductWindowAndShowDepotWindow();
         }
 
-        private async void SaveProduct()
+        #region Entity Framework
+        //private async void SaveProductAsync()
+        //{
+        //    if (Name != null && Description != null && Price != null && Count != null)
+        //    {
+        //        var product = new Product(Name, Description, Price, Count);
+        //        using (var context = new RestoratorDb())
+        //        {
+        //            context.Products.Add(product);
+        //            await context.SaveChangesAsync();
+        //        }
+        //        MessageBox.Show("Product added to the database!");
+        //        ClearText();
+        //        CloseAddProductWindowAndShowDepotWindow();
+        //    }
+        //    else
+        //        MessageBox.Show("Enter information in all fields!");
+        //}
+#endregion
+
+        private void SaveProductAsync()
         {
-            var product = new Product(Name, Description, Price, Count);
-            using (var context = new RestoratorDb())
+            if (Name != null && Description != null && Price != null && Count != null)
             {
-                context.Products.Add(product);
-                await context.SaveChangesAsync();
+                var product = new Product(Name, Description, Price, Count);
+                StorageDbConnection.AddProduct(product);
+                MessageBox.Show("Product added to the database!");
+                ClearText();
+                CloseAddProductWindowAndShowDepotWindow();
             }
-            MessageBox.Show("Product added to the database!");
-            ClearText();
-            CloseAddProductWindowAndShowDepotWindow();
+            else
+                MessageBox.Show("Enter information in all fields!");
         }
 
         private void CloseAddProductWindowAndShowDepotWindow()

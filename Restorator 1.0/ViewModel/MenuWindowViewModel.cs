@@ -2,6 +2,7 @@
 using System.Windows.Input;
 using Restorator.Commands;
 using Restorator.Model;
+using Restorator.View;
 
 namespace Restorator.ViewModel
 {
@@ -82,7 +83,7 @@ namespace Restorator.ViewModel
         {
             RefreshCommand = new DelegateCommand(arg => ShowAllDishes());
             DeleteCommand = new DelegateCommand(arg => DeleteSelectedDish());
-            AddCommand = new DelegateCommand(arg => AddDish());
+            AddCommand = new DelegateCommand(arg => AddDishWindowOpen());
             ShowAllDishes();
         }
 
@@ -96,9 +97,13 @@ namespace Restorator.ViewModel
 
         }
 
-        private void AddDish()
+        private void AddDishWindowOpen()
         {
-
+            AddDishWindow addDishWindow = new AddDishWindow
+            {
+                DataContext = new AddDishWindowViewModel()
+            };
+            addDishWindow.Show();
         }
     }
 }

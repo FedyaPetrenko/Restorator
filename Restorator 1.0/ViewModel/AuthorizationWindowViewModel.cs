@@ -2,8 +2,11 @@
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Threading;
 using Restorator.Commands;
 using Restorator.DataAcces;
 using Restorator.Model;
@@ -47,7 +50,7 @@ namespace Restorator.ViewModel
         {
             AuthorizationWindowInitializing();
             OpenRegistrationWindowCommand = new DelegateCommand(arg => OpenRegistrationWindow());
-            SignInCommand = new DelegateCommand(arg => SignIn());
+            SignInCommand = new DelegateCommand(arg => SignInClick());
             SignOutCommand = new DelegateCommand(arg => SignOut());
         }
 
@@ -64,7 +67,10 @@ namespace Restorator.ViewModel
             foreach (var win in windows.OfType<AuthorizationWindow>())
             {
                 _authorizationWindow = win;
-                _authorizationWindow.Closed += (sender, e) => { _authorizationWindow.Close(); };
+                _authorizationWindow.Closed += (sender, e) =>
+                {
+                    _authorizationWindow.Close();
+                };
             }
         }
 
@@ -78,26 +84,37 @@ namespace Restorator.ViewModel
             _authorizationWindow.Close();
         }
 
-        private void SignIn()
+        private void SignInClick()
         {
-            using (var context = new RestoratorDb())
-            {
-                if (Login != null && Password != null)
-                {
-                    var signEmployee = context.Employees.FirstOrDefaultAsync(emp => emp.Login == Login);
-                    if (signEmployee.Result.Token == GetMd5(Login + Password))
-                    {
-                        Settings.Default.Token = signEmployee.Result.Token;
-                        Settings.Default.Save();
-                        MessageBox.Show("Sign successful!");
-                    }
-                    else
-                        MessageBox.Show("Sign failed!");
-                }
-                else
-                    MessageBox.Show("Enter your login and password!");
-            }
-            _authorizationWindow.Hide();
+            ThreadStart threadStart = SaveTokenInSettings;
+            _authorizationWindow.Dispatcher.BeginInvoke(DispatcherPriority.Normal, threadStart);
+        }
+
+        //private async void SaveTokenInSettings()
+        //{
+        //    using (var context = new RestoratorDb())
+        //    {
+        //        if (Login != null && Password != null)
+        //        {
+        //            var signEmployee = await context.Employees.FirstOrDefaultAsync(emp => emp.Login == Login);
+        //            if (signEmployee.Token == GetMd5(Login + Password))
+        //            {
+        //                Settings.Default.Token = signEmployee.Token;
+        //                Settings.Default.Save();
+        //                _authorizationWindow.Hide();
+        //                MessageBox.Show("Sign successful!");
+        //            }
+        //            else
+        //                MessageBox.Show("Sign failed!");
+        //        }
+        //        else
+        //            MessageBox.Show("Enter your login and password!");
+        //    }
+        //}
+
+        private void SaveTokenInSettings()
+        {
+           
         }
 
         public static string GetMd5(string sourcePw)

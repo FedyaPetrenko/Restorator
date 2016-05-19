@@ -62,3 +62,5 @@ E:\Labs\4 semester\ООП 2\Restorator\Restorator 1.0\bin\Debug\Restorator.Model
 E:\Labs\4 semester\ООП 2\Restorator\Restorator 1.0\bin\Debug\Restorator.Model.pdb
 E:\Labs\4 semester\ООП 2\Restorator\Restorator 1.0\obj\Debug\GeneratedInternalTypeHelper.g.cs
 E:\Labs\4 semester\ООП 2\Restorator\Restorator 1.0\obj\Debug\Restorator_MarkupCompile.lref
+E:\Labs\4 semester\ООП 2\Restorator\Restorator 1.0\obj\Debug\View\AddDishWindow.g.cs
+E:\Labs\4 semester\ООП 2\Restorator\Restorator 1.0\obj\Debug\View\AddDishWindow.baml

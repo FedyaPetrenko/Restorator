@@ -24,7 +24,7 @@ namespace Restorator.ViewModel
         private string _login;
         private string _password;
 
-        public Employee Employee { get; set; }
+        private Employee Employee { get; set; }
 
         public string FirstName
         {
@@ -139,7 +139,7 @@ namespace Restorator.ViewModel
         public RegistrationWindowViewModel()
         {
             RegistrationWindowInitializing();
-            SaveEmployeeCommand = new DelegateCommand(arg => SaveEmployee());
+            SaveEmployeeCommand = new DelegateCommand(arg => SaveEmployeeAsync());
             ClearTextCommand = new DelegateCommand(arg => ClearText());
         }
 
@@ -152,27 +152,31 @@ namespace Restorator.ViewModel
             foreach (var win in windows.OfType<RegistrationWindow>())
             {
                 _registrationWindow = win;
-                _registrationWindow.Closed += (sender, e) => { _registrationWindow.Close(); };
             }
         }
 
-        private async void SaveEmployee()
+        //private async void SaveEmployeeAsync()
+        //{
+        //    if (CheckFieldsForNull())
+        //    {
+        //        Employee = new Employee(FirstName, SecondName, ThirdName, PhoneNumber, Email, HomeAddress,
+        //            IdentificationCode, Salary, CardNumber, Login, Password,
+        //            AuthorizationWindowViewModel.GetMd5(Login + Password));
+        //        using (RestoratorDb context = new RestoratorDb())
+        //        {
+        //            context.Employees.Add(Employee);
+        //            await context.SaveChangesAsync();
+        //        }
+        //        MessageBox.Show("Reristration successful!");
+        //        _registrationWindow.Hide();
+        //    }
+        //    else
+        //        MessageBox.Show("Enter information in all fields!");
+        //}
+
+        private void SaveEmployeeAsync()
         {
-            if (CheckFieldsForNull())
-            {
-                Employee = new Employee(FirstName, SecondName, ThirdName, PhoneNumber, Email, HomeAddress,
-                    IdentificationCode, Salary, CardNumber, Login, Password,
-                    AuthorizationWindowViewModel.GetMd5(Login + Password));
-                using (RestoratorDb context = new RestoratorDb())
-                {
-                    context.Employees.Add(Employee);
-                    await context.SaveChangesAsync();
-                }
-                MessageBox.Show("Reristration successful!");
-                _registrationWindow.Hide();
-            }
-            else
-                MessageBox.Show("Enter information in all fields!");
+            
         }
 
         private bool CheckFieldsForNull()

@@ -3,8 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:Restorator.ViewModel"
         Title="Restorator - Product depot"
-        MinHeight="200"
-        MinWidth="700"
+        MinHeight="400"
+        MinWidth="900"
         WindowStartupLocation="CenterScreen"
         ShowInTaskbar="True"
         SizeToContent="WidthAndHeight"
@@ -13,7 +13,7 @@
         ResizeMode="CanResize">
 
     <Window.DataContext>
-        <local:DepotWindowViewModel></local:DepotWindowViewModel>
+        <local:DepotWindowViewModel />
     </Window.DataContext>
 
     <Grid>
@@ -43,36 +43,37 @@
             FontSize="18.667"
             FontFamily="Times New Roman"
             SelectionMode="Single"
-            AutoGenerateColumns="False" 
+            AutoGenerateColumns="False"
             MaxColumnWidth="300"
-            SelectedItem="{Binding SelectedProduct}" >
+            SelectedItem="{Binding SelectedProduct}"
+            ToolTip="Click to change data">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding ProductId}" 
-                                    ClipboardContentBinding="{x:Null}" 
-                                    Foreground="Black" 
-                                    FontFamily="Source Code Pro Semibold" 
-                                    Header="Bar code" 
-                                    IsReadOnly="True"/>
-                <DataGridTextColumn Binding="{Binding Name}" 
-                                    ClipboardContentBinding="{x:Null}" 
-                                    FontFamily="Source Code Pro Semibold" 
-                                    Header="Name"/>
-                <DataGridTextColumn Binding="{Binding Description}" 
-                                    ClipboardContentBinding="{x:Null}" 
-                                    FontFamily="Segoe Print" 
-                                    Header="Description"/>
-                <DataGridTextColumn Binding="{Binding Price}" 
-                                    ClipboardContentBinding="{x:Null}" 
-                                    FontFamily="Source Code Pro Semibold" 
-                                    Header="Price"/>
-                <DataGridTextColumn Binding="{Binding Count}" 
-                                    ClipboardContentBinding="{x:Null}" 
-                                    FontFamily="Source Code Pro Semibold" 
-                                    Header="Count"/>
+                <DataGridTextColumn Binding="{Binding ProductId}"
+                                    ClipboardContentBinding="{x:Null}"
+                                    Foreground="Black"
+                                    FontFamily="Source Code Pro Semibold"
+                                    Header="Bar code"
+                                    IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding Name}"
+                                    ClipboardContentBinding="{x:Null}"
+                                    FontFamily="Source Code Pro Semibold"
+                                    Header="Name" />
+                <DataGridTextColumn Binding="{Binding Description}"
+                                    ClipboardContentBinding="{x:Null}"
+                                    FontFamily="Segoe Print"
+                                    Header="Description" />
+                <DataGridTextColumn Binding="{Binding Price}"
+                                    ClipboardContentBinding="{x:Null}"
+                                    FontFamily="Source Code Pro Semibold"
+                                    Header="Price" />
+                <DataGridTextColumn Binding="{Binding Count}"
+                                    ClipboardContentBinding="{x:Null}"
+                                    FontFamily="Source Code Pro Semibold"
+                                    Header="Count" />
                 <DataGridTextColumn Binding="{Binding Dishes}"
-                                    ClipboardContentBinding="{x:Null}" 
-                                    FontFamily="Century Gothic" 
-                                    Header="Dishes" IsReadOnly="True"/>
+                                    ClipboardContentBinding="{x:Null}"
+                                    FontFamily="Century Gothic"
+                                    Header="Dishes" IsReadOnly="True" />
             </DataGrid.Columns>
         </DataGrid>
 
@@ -88,7 +89,7 @@
                     MinWidth="150"
                     MinHeight="35"
                     Command="{Binding AddProductCommand}"
-                    VerticalAlignment="Bottom"/>
+                    VerticalAlignment="Bottom" />
 
             <Button Content="Delete"
                     HorizontalAlignment="Left"
@@ -106,7 +107,7 @@
                     Height="auto"
                     MinWidth="100"
                     MinHeight="35"
-                    Command="{Binding RefreshTableWithProductsCommand}"/>
+                    Command="{Binding RefreshTableWithProductsCommand}" />
 
             <Button Content="Save changes"
                     HorizontalAlignment="Left"
@@ -115,7 +116,27 @@
                     Height="auto"
                     MinWidth="100"
                     MinHeight="35"
-                    Command="{Binding SaveChangesInProductTableCommand}"/>
+                    Command="{Binding SaveChangesInProductTableCommand}" />
+
+            <TextBox Width="170"
+                     HorizontalAlignment="Right"
+                     FontSize="20"
+                     Margin="90,3,0,13"
+                     Text="{Binding ProductToFind}"
+                     ToolTip="Enter name of product" />
+
+            <Button HorizontalAlignment="Right"
+                    Margin="0,0,0,10"
+                    Width="auto"
+                    Height="auto" 
+                    Background="{x:Null}" 
+                    BorderBrush="{x:Null}"
+                    Command="{Binding FindProductCommand}">
+                <Image Source="../Images/find.png"
+                       Width="27" 
+                       ToolTip="Enter name of product to near field" />
+            </Button>
         </StackPanel>
     </Grid>
 </Window>
+
